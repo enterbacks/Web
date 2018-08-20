@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--引入jQuery库-->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script>
+      /*入口文件*/
+        $(function () {
+            /*DOM对象*/
+            var domObj = document.getElementById("btn");
+
+            /*jQuery对象*/
+            var jQueryObj = $("#btn");
+
+            /*DOM对象转换成jQuery对象    直接把DOM对象写在$()里面*/
+            var DOMtoJquery = $(domObj);
+
+
+            /*实验一下，看看转换后的对象能否调用jQuery的方法click()*/
+            DOMtoJquery.click(function () {
+                alert("DOM对象转换成jQuery对象成功啦");
+            });
+
+            /*jQuery对象转换成DOM对象    jQuery对象[0]*/
+            var jQueryToDOM = jQueryObj[0];
+            /*实验一下，看看转换后的对象能否调用DOM的方法onclick()*/
+            jQueryToDOM.onclick=function () {
+                alert("jQuery对象转换成DOM对象成功啦");
+            }
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="按钮" id = "btn">
+</body>
+</html>

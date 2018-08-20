@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="button" value="点击" id="btn" >
+<p id="p1">我是原来的内容</p>
+<script>
+    document.getElementById("btn").onclick=function () {
+        var pObj= document.getElementById("p1");
+        pObj.innerText = "更改内容啦";
+    }
+</script>
+</body>
+</html>

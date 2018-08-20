@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <input type="button" id="btn" value="更改a标签内容和链接地址">
+    <a href="https://www.baidu.com/" id="a">百度</a>
+    <script>
+        document.getElementById("btn").onclick=function () {
+            var a = document.getElementById("a");
+            a.href="https://www.csdn.net//";
+            a.innerText="CSDN";
+        }
+    </script>
+</body>
+</html>

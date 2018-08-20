@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <input type="button" id="btn" value="更改p标签内容">
+    <div id="div1">
+        <p>我是原来的内容</p>
+        <p>我是原来的内容</p>
+        <p>我是原来的内容</p>
+        <p>我是原来的内容</p>
+        <p>我是原来的内容</p>
+    </div>
+    <p>我是原来的内容</p>
+    <p>我是原来的内容</p>
+    <p>我是原来的内容</p>
+    <p>我是原来的内容</p>
+    <p>我是原来的内容</p>
+    <script>
+        //更改div1下面的p标签内容
+        document.getElementById("btn").onclick=function () {
+            var p = document.getElementById("div1").getElementsByTagName("p");//这是一个对象数组
+            for(var i = 0; i<p.length;i++){
+                p[i].innerText= "修改后的内容";
+            }
+        }
+    </script>
+</body>
+</html>

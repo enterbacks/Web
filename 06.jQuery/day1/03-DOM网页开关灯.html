@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css" rel="stylesheet">
+        .cls{
+            background-color: #000;
+        }
+    </style>
+
+</head>
+<body>
+    <input type="button" value="开关" id="btn">
+    <script>
+        /*DOM版本*/
+        var body = document.getElementById("btn");
+        body.onclick=function () {
+            if(body.className == "cls"){
+                body.className=="";
+            }else{
+                body.className=="cls";
+            }
+        }
+    </script>
+</body>
+</html>
