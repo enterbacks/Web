@@ -1,1230 +1,1555 @@
----
- 学习目标:
-
-  - 了解常用浏览器
-  - 掌握WEB标准
-  - 理解标签语义化
-  - 掌握常用的排版标签
-  - 掌握常用的文本格式化图像链接等标签
-  - 掌握三种列表标签
-  - 掌握表格标签
-  - 掌握表格标签
-  - 掌握表单标签
-typora-copy-images-to: media
----
-
-# 自我介绍
-
-传智讲师   刘晓强     江湖人称  强哥  
-
-但是不是
-
-<img src="media/qq.jpg" />
-
-
-
-也不是：
-
-<img src="media/lk.jpg" />
-
-其实这是我：
-
-
-
-<img src="media/gt.jpg" />
-
-
-
-
-
-前端基础  html +css    基础班        html 2 +css  7天    9 天 传统布局    +  3天 html 5 +css3 基础
-
-就业班   js     移动web       php + 项目  15      node      vue     框架  微信 ...  大前端    
-
-# HTML 第一天目标
-
-能够写出基本的页面（里面包含图片、各种标签和链接）
-
-# 开发工具
-
-我们主要用的 开发工具有   chrome  、  sublime 、  photoshop
-
-## 浏览器（显示）
-
-```
-浏览器是网页显示、运行的平台，常用的浏览器有IE、火狐（Firefox）、谷歌（Chrome）、Safari和Opera等。我们平时称为五大浏览器。
-```
-
-<img src="media/b.png" />
-
-### 查看浏览器占有的市场份额（知晓）
-
-查看网站： <a href="http://tongji.baidu.com/data/browser" target="_blank">http://tongji.baidu.com/data/browser</a>
-
-<img src="media/count.png" />
-
-
-
-
-
- 这些工具你认识几个？
-
-## sublime（书写）
-
- <img src="media/s.png" />
-
-  普通青年    Dreamweaver
-
-  文艺青年    sublime
-
-  高手和傻子  用记事本
-
-  其实。。。。
-
-
-
-
-
-
-
-
-
-
-
-  <img src="media/node.png" />
-
-
-
-## Photoshop(协助)
-
-![1498465020015](media/1498465020015.png)
-
-PS 工具是我们使用频率比较高的软件之一， 我们学习PS目的不是为了设计海报做电商和UI的，而是要求：
-
-1. **熟练的切图**
-2. 能和网站美工美眉有共同话题。。。。。
-
-# 认识网页
-
-```
-网页主要由文字、图像和超链接等元素构成。当然，除了这些元素，网页中还可以包含音频、视频以及Flash等。
-```
-
-<img src="media/mi.png"alt="">
-
-```
-思考：  网页是如何形成的呢?
-```
-
-<img src="media/web.png" />
-
-# 常见浏览器内核介绍
-
-```
-浏览器是网页运行的平台，常用的浏览器有IE、火狐（Firefox）、谷歌（Chrome）、Safari和Opera等。我们平时称为五大浏览器。
-```
-
-<img src="media/b.png" />
-
-
-
-## 浏览器内核（理解）             
-
-```
-浏览器内核又可以分成两部分：渲染引擎(layout engineer 或者 Rendering Engine)和 JS 引擎。
-渲染引擎 它负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入 CSS 等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。
-JS 引擎 则是解析 Javascript 语言，执行 javascript语言来实现网页的动态效果。
-
-最开始渲染引擎和 JS 引擎并没有区分的很明确，后来 JS 引擎越来越独立，内核就倾向于只指渲染引擎。有一个网页标准计划小组制作了一个 ACID 来测试引擎的兼容性和性能。内核的种类很多，如加上没什么人使用的非商业的免费内核，可能会有10多种，但是常见的浏览器内核可以分这四种：Trident、Gecko、Blink、Webkit。
-```
-
-（1）Trident(IE内核) 
-
-国内很多的双核浏览器的其中一核便是 Trident，美其名曰 "兼容模式"。
-
-代表： IE、傲游、世界之窗浏览器、Avant、腾讯TT、猎豹安全浏览器、360极速浏览器、百度浏览器等。
-
-Window10 发布后，IE 将其内置浏览器命名为 Edge，Edge 最显著的特点就是新内核 EdgeHTML。
-
-（2）Gecko(firefox) 
-
-Gecko(Firefox 内核)： Mozilla FireFox(火狐浏览器) 采用该内核，Gecko 的特点是代码完全公开，因此，其可开发程度很高，全世界的程序员都可以为其编写代码，增加功能。 可惜这几年已经没落了， 比如 打开速度慢、升级频繁、猪一样的队友flash、神一样的对手chrome。
-
-（3） webkit(Safari)  
-
- Safari 是苹果公司开发的浏览器，所用浏览器内核的名称是大名鼎鼎的 WebKit。
-
- 现在很多人错误地把 webkit 叫做 chrome内核（即使 chrome内核已经是 blink 了），苹果感觉像被别人抢了媳妇，都哭晕再厕所里面了。
-
- 代表浏览器：傲游浏览器3、 Apple Safari (Win/Mac/iPhone/iPad)、Symbian手机浏览器、Android 默认浏览器，
-
-（4） Chromium/Blink(chrome) 
-
-   在 Chromium 项目中研发 Blink 渲染引擎（即浏览器核心），内置于 Chrome 浏览器之中。Blink 其实是 WebKit 的分支。 
-
-​     大部分国产浏览器最新版都采用Blink内核。二次开发
-
-（5） Presto(Opera) 
-
-  Presto（已经废弃） 是挪威产浏览器 opera 的 "前任" 内核，为何说是 "前任"，因为最新的 opera 浏览器早已将之抛弃从而投入到了谷歌怀抱了。  
-
-```
-了解一点：
-```
-
-移动端的浏览器内核主要说的是系统内置浏览器的内核。
-
-Android手机而言，使用率最高的就是Webkit内核，大部分国产浏览器宣称的自己的内核，基本上也是属于webkit二次开发。
-
-iOS以及WP7平台上，由于系统原因，系统大部分自带浏览器内核，一般是Safari或者IE内核Trident的
-
-# Web标准（重点）
-
-通过以上浏览器的内核不同，我们知道他们工作原理、解析肯定不同，显示就会有差别。
-
-```
-问：  哪个语言再全国基本都可以听得懂？ 
-```
-
-<img src="media/bz.png" />
-
-## Web 标准的好处
-
-*1*、让Web的发展前景更广阔 
-*2*、内容能被更广泛的设备访问
-*3*、更容易被搜寻引擎搜索
-*4*、降低网站流量费用
-*5*、使网站更易于维护
-*6*、提高页面浏览速度
-
-##  Web 标准构成
-
- Web标准不是某一个标准，而是由W3C和其他标准化组织制定的一系列标准的集合。
-
-主要包括结构（Structure）、表现（Presentation）和行为（Behavior）三个方面。
-
-~~~
-结构标准：结构用于对网页元素进行整理和分类，咱们主要学的是HTML。 最重要
-表现标准：表现用于设置网页元素的版式、颜色、大小等外观样式，主要指的是CSS。
-行为标准：行为是指网页模型的定义及交互的编写，咱们主要学的是 Javascript
-~~~
-
-理想状态我们的源码： .HTML    .css   .js 
-
-直观感受：
-
-<img src="media/gx.png" />
-
-总结WEB标准：
-
-结构标准：   <img src="media/hb1.png" />  决定你是否有个好天然身体 
-
-
-
-表现标准：   <img src="media/hb2.png" />  决定你是否打扮的美丽外观
-
-
-
-行为标准：   <img src="media/hb3.jpg"  width="420"   />  决定你是否有吸引人的行为
-
-
-
-## 课堂一练：
-
-**1.关于WEB标准下列说法正确的是: **
-
-A html决定页面的行为，css决定页面的样式，js决定页面的结构
-
-B html决定页面的样式，css决定页面的结构，js决定页面的行为
-
-C html决定页面的结构，css决定页面的样式，js决定页面的行为
-
-D 以上都不正确
-
-2 **web 标准里边规定三层分离不包括哪部分**
-
-A．HTML
-
-B．CSS
-
-C．JavaScript
-
-D．PHP
-
-3.**关于WEB标准下列说法正确的是**
-
-A．html相当于人的动作行为，CSS相当于人的穿着打扮，javascript相当于人的骨架结构；
-
-B．html相当于人的骨架结构，CSS相当于人的穿着打扮，javascript相当于人的动作行为；
-
-C．html相当于人的穿着打扮，CSS相当于人的骨架结构，javascript相当于人的动作行为；
-
-D．html相当于人的骨架结构，CSS相当于人的动作行为，javascript相当于人的穿着打扮；
-
-# HTML 初识
-
-一般先学习HTML+CSS， 这里我们先定一个小目标，先学HTML,后学习CSS。
-
-HTML（英文Hyper Text Markup Language的缩写）中文译为“超文本标签语言”。是用来描述网页的一种语言。
-
-所谓超文本，因为它可以加入图片、声音、动画、多媒体等内容，不仅如此，它还可以从一个文件跳转到另一个文件，与世界各地主机的文件连接。
-
-```html
-<h1> 我是一个大标题 </h1>
-```
-
-   注意：   体会 文本    标签    语言   几个词语
-
-- HTML 指的是超文本标记语言 (**H**yper **T**ext **M**arkup **L**anguage)
-- HTML 不是一种编程语言，而是一种标记语言 (markup language)
-- 标记语言是一套标记标签 (markup tag)
-
-总结： HTML 作用就是用标记标签来描述网页，把网页内容在浏览器中展示出来。 
-
-用文字来描述网页标签
-
-## HTML骨架格式
-
-日常生活的书信，我们要遵循共同的约定。 
-
-<img src="media/mess.png" alt="">
-
-同理：HTML 有自己的语言语法骨架格式：
-
-```html
-<HTML>   
-    <head>     
-        <title></title>
-    </head>
-    <body>
-    </body>
-</HTML>
-```
-
-课堂练习1：    书写我们的第一个HTML 页面！
-
-1. 新建一个demo 的 TXT 文件。
-2. 里面写入刚才的HTML 骨架。月薪过万 你我之间  黑马洗练  一飞冲天
-3. 把后缀名改为 .HTML。
-4. 右击--谷歌浏览器打开。
-
-~~~
-1 HTML标签：
-
-作用所有HTML中标签的一个根节点。 最大的标签   根标签
-
-2 head标签： 文档的头部
-
-文档的头部描述了文档的各种属性和信息，包括文档的标题、在 Web 中的位置以及和其他文档的关系等。绝大多数文档头部包含的数据都不会真正作为内容显示给读者。
-
-注意在head标签中我们必须要设置的标签是title
-
-3.title标签： 文档的标题
-
-作用：让页面拥有一个属于自己的标题。
-
-4.body标签：文档的主体  以后我们的页面内容 基本都是放到body里面的
-
-body 元素包含文档的所有内容（比如文本、超链接、图像、表格和列表等等。）
-~~~
-
-
-
-为了便于记忆，我们请出刚才要辞职回家养猪的二师兄来帮忙， 我称之为  猪八戒记忆法
-
-<img src="media/pig.png" />
-
-
-
-
-
-## HTML标签分类
-
-  在HTML页面中，带有“< >”符号的元素被称为HTML标签，如上面提到的 &lt;HTML&gt;、&lt;head&gt;、&lt;body&gt;都是HTML骨架结构标签。所谓标签就是放在“< >” 标签符中表示某个功能的编码命令，也称为HTML标签或 HTML元素
-
-1.双标签
-
-~~~html
-<标签名> 内容 </标签名>
-~~~
-
-该语法中“<标签名>”表示该标签的作用开始，一般称为“开始标签（start tag）”，“</标签名>” 表示该标签的作用结束，一般称为“结束标签（end tag）”。和开始标签相比，结束标签只是在前面加了一个关闭符“/”。
-
-> ~~~html
-> 比如 <body>我是文字  </body>
-> ~~~
-
-2.单标签
-
-~~~html
-<标签名 />
-~~~
-
-  单标签也称空标签，是指用一个标签符号即可完整地描述某个功能的标签。
-
-> ~~~html
-> 比如  <br />
-> ~~~
-
-## HTML标签关系
-
-标签的相互关系就分为两种：
-
-1.嵌套关系
-
-```html
-<head>  <title> </title>  </head>
-```
-
-<img src="media/father.jpg">
-
-2.并列关系
-
-```html
-<head></head>
-<body></body>
-```
-
-<img src="media/xiong.jpg">
-
-倡议： 如果两个标签之间的关系是嵌套关系，子元素最好缩进一个tab键的身位。如果是并列关系，最好上下对齐。
-
-## 课堂一练
-
-
-
-```
-请问下列哪个标签是错误的？
-```
-
-```
-A  <head></head><body></body>
-```
-
-```
-B  <strong><div></div></strong>
-```
-
-```
-C  <head><title></head></title>
-```
-
-```
-D  <body><div></div></body>
-```
-
-
-
- 
-
-
-
-  <a href="key.HTML" target="_blank">sublime 一些常用快捷键  点我查看 </a>
-
-
-
-~~~
-再页面中输入 以下2个单词
-1.  html: 5   
-2.  !
-   在sublime里面然后按下tab键盘即可生成HTML骨架
-~~~
-
-
-
-# 文档类型<!DOCTYPE>
-
-~~~html
-<!DOCTYPE html> 
-~~~
-
-同学你用啥手机？你咋回答？  
-
-这句话就是告诉我们使用哪个html版本？  我们使用的是 html 5 的版本。  html有很多版本，那我们应该告诉用户和浏览器我们使用的版本号。
-
-<!DOCTYPE> 标签位于文档的最前面，用于向浏览器说明当前文档使用哪种 HTML 或 XHTML 标准规范，必需在开头处使用<!DOCTYPE>标签为所有的XHTML文档指定XHTML版本和类型，只有这样浏览器才能按指定的文档类型进行解析。
-
-注意：  一些老网站可能用的还是老版本的文档类型比如 XHTML之类的，但是我们学的是HTML5,而且HTML5的文档类型兼容很好(向下兼容的原则)，所以大家放心的使用HTML5的文档类型就好了。
-
-# 字符集
-
-<meta charset="UTF-8" />
-
-utf-8是目前最常用的字符集编码方式，常用的字符集编码方式还有gbk和gb2312。
-
-gb2312 简单中文  包括6763个汉字
-
-BIG5   繁体中文 港澳台等用
-
-GBK包含全部中文字符    是GB2312的扩展，加入对繁体字的支持，兼容GB2312
-
-UTF-8则包含全世界所有国家需要用到的字符
-
-```
-记住一点，以后我们统统使用UTF-8 字符集, 这样就避免出现字符集不统一而引起乱码的情况了。
-```
-
-# HTML标签的语义化
-
-白话： 所谓标签语义化，就是指标签的含义。
-
-## 为什么要有语义化标签
-
-1. 方便代码的阅读和维护
-
-2. 同时让浏览器或是网络爬虫可以很好地解析，从而更好分析其中的内容 
-
-3. 使用语义化标签会具有更好地搜索引擎优化 
-
-
-核心：合适的地方给一个最为合理的标签。
-
-语义是否良好： 当我们去掉CSS之后，网页结构依然组织有序，并且有良好的可读性。
-
-白话，一眼看去，就知道那个是重点，结构是什么，知道每块的内容是干啥的。
-
-遵循的原则：先确定语义的HTML ，再选合适的CSS。
-
-# HTML常用标签
-
- 首先 HTML和CSS是两种完全不同的语言，我们学的是结构，就只写HTML标签，认识标签就可以了。 不会再给结构标签指定样式了。
-
- HTML标签有很多，这里我们学习最为常用的，后面有些较少用的，我们可以查下手册就可以了。 
-
-## 排版标签
-
-排版标签主要和css搭配使用，显示网页结构的标签，是网页布局最常用的标签。
-
-### 标题标签 (熟记)
-
- 单词缩写：  head   头部. 标题     title  文档标题
-
-为了使网页更具有语义化，我们经常会在页面中用到标题标签，HTML提供了6个等级的标题，即
-
- <h1>、<h2>、<h3>、<h4>、<h5>和<h6>
-
-~~~
-标题标签语义：  作为标题使用，并且依据重要性递减
-~~~
-
-其基本语法格式如下：
-
-```html
-<hn>   标题文本   </hn>
-```
-
-
-
-> 注意：  h1 标签因为重要，尽量少用，不要动不动就向你扔了一个h1。 一般h1 都是给logo使用，或者页面中最重要标题信息。
-
-  <img src="media/dog.gif" />
-
-```
-    传智播客学前端，
-　　前端学院四十班。
-　　新班强哥讲台站，
-　　又带新颜技术钻。
-　　标题一共六级选，
-　　具体效果刷新见。
-　　        ------强哥
-```
-
-
-
-### 段落标签( 熟记)
-
-单词缩写：  paragraph  段落  [ˈpærəgræf]    无须记这个单词
-
- 在网页中要把文字有条理地显示出来，离不开段落标签，就如同我们平常写文章一样，整个网页也可以分为若干个段落，而段落的标签就是
-
-~~~html
-<p>  文本内容  </p>
-~~~
-
-是HTML文档中最常见的标签，默认情况下，文本在一个段落中会根据浏览器窗口的大小自动换行。
-
-### 水平线标签(认识)
-
-单词缩写：  horizontal  横线    [ˌhɔrəˈzɑntl]    同上
-
-在网页中常常看到一些水平线将段落与段落之间隔开，使得文档结构清晰，层次分明。这些水平线可以通过插入图片实现，也可以简单地通过标签来完成，<hr />就是创建横跨网页水平线的标签。其基本语法格式如下：
-
-```html
-<hr />是单标签
-```
-
- 在网页中显示默认样式的水平线。
-
-课堂练习2：    新闻页面 
-
-<img src="media/sh.png" /> 
-
-
-
-
-
-
-
-### 换行标签(熟记)
-
-单词缩写：  break   打断 ,换行
-
-在HTML中，一个段落中的文字会从左到右依次排列，直到浏览器窗口的右端，然后自动换行。如果希望某段文本强制换行显示，就需要使用换行标签
-
-```html
-<br />
-```
-
-这时如果还像在word中直接敲回车键换行就不起作用了。
-
-## 课堂一练
-
-关于标签下列说法正确的是 
-
-(A) P1是段落标签
-
-(B) H1 是标题标签
-
-(C) Hr是换行标签
-
-(D) Br 是一条直线
-
- 2 关于标签下列说法不正确的是
-
-(A) H标签有6个等级分别是<h1> <h2> <h3> <h4> <h5>和<h6>
-
-(B) h1到h6 文字从小到大 
-
-(C) p标签一行只能放一个
-
-(D) P是段落标签会给文字加上段落的语义
-
-### div span标签(重点)
-
-div  span    是没有语义的     是我们网页布局主要的2个盒子     css+div
-
-div 就是  division  的缩写   分割， 分区的意思  其实有很多div 来组合网页。
-
-span, 跨度，跨距；范围    
-
-语法格式：
-
-~~~html
-<div> 这是头部 </div>    <span>今日价格</span>
-~~~
-
-
-
-## 文本格式化标签(熟记)
-
-在网页中，有时需要为文字设置粗体、斜体或下划线效果，这时就需要用到HTML中的文本格式化标签，使文字以特殊的方式显示。
-
-<img src="media/tab.png" />
-
-  b  i  s  u   只有使用 没有 强调的意思       strong   em  del   ins  语义更强烈
-
-
-
-## 标签属性
-
-<img src="media/ttt.jpg" width="300"  />
-
-属性就是特性 比如 手机的颜色 手机的尺寸 ，总结就是手机的。。
-
-手机的颜色是黑色   手机的尺寸是 8寸
-
-水平线的长度是 200  
-
-图片的宽度 是  300    键  值对
-
-使用HTML制作网页时，如果想让HTML标签提供更多的信息，可以使用HTML标签的属性加以设置。其基本语法格式如下：
-
-```html
-<标签名 属性1="属性值1" 属性2="属性值2" …> 内容 </标签名>
-```
-
-
-
-在上面的语法中，
-
-1.标签可以拥有多个属性，必须写在开始标签中，位于标签名后面。
-
-2.属性之间不分先后顺序，标签名与属性、属性与属性之间均以空格分开。
-
-3.任何标签的属性都有默认值，省略该属性则取默认值。
-
-采取  键值对 的格式   key="value"  的格式  
-
-比如:  
-
-```html
-<hr width="400" />
-```
-
-属性  是 宽度  
-
-值    是 400 
-
-提倡：   尽量不使用 样式属性。   <img src="media/sm.jpg" /> 
-
-## 图像标签img (重点)
-
-单词缩写：   image  图像
-
-HTML网页中任何元素的实现都要依靠HTML标签，要想在网页中显示图像就需要使用图像标签，接下来将详细介绍图像标签<img />以及和他相关的属性。其基本语法格式如下：
-
-该语法中src属性用于指定图像文件的路径和文件名，他是img标签的必需属性。
-
-```html
-<img src="图像URL" />
-```
-
-
-
-<img src="media/img.png" />
-
-
-
-**当网页显示图片时,鼠标滑上图片显示文字描述是以下哪个属性******
-
-(A) 设置alt属性
-
-(B) 设置title属性
-
-(C) 设置href 属性
-
-(D) 设置src 属性
-
- 
-
-**2  在HTML中，使用<img>标签插入图像，下列选项关于<img>的src属性说法正确的是 **
-
-(A) 用来设置图片的格式
-
-(B) 用来设置图片的所在位置
-
-(C) 用来设置鼠标指向图片时显示的文字
-
-(D) 用来设置图片是否能正确显示 
-
-
-
-## 链接标签(重点)
-
-单词缩写：  anchor 的缩写  [ˈæŋkə(r)] 。基本解释 锚, 铁锚 的
-
-在HTML中创建超链接非常简单，只需用标签环绕需要被链接的对象即可，其基本语法格式如下：
-
-```html
-<a href="跳转目标" target="目标窗口的弹出方式">文本或图像</a>
-```
-
-href：用于指定链接目标的url地址，当为标签应用href属性时，它就具有了超链接的功能。  Hypertext Reference的缩写。意思是超文本引用
-
-target：用于指定链接页面的打开方式，其取值有_self和_blank两种，其中_self为默认值，_blank为在新窗口中打开方式。
-
-注意：
-
-1.外部链接 需要添加 http:// www.baidu.com
-
-2.内部链接 直接链接内部页面名称即可 比如 < a href="index.html"> 首页 </a >
-
-3.如果当时没有确定链接目标时，通常将链接标签的href属性值定义为“#”(即href="#")，表示该链接暂时为一个空链接。
-
-4.不仅可以创建文本超链接，在网页中各种网页元素，如图像、表格、音频、视频等都可以添加超链接。
-
-### 锚点定位 （难点）
-
-通过创建锚点链接，用户能够快速定位到目标内容。
-创建锚点链接分为两步：
-
-~~~html
-1.使用“a href=”#id名>“链接文本"</a>创建链接文本（被点击的）
-  <a href="#two">   
-
-2.使用相应的id名标注跳转目标的位置。
-  <h3 id="two">第2集</h3> 
-~~~
-
-### base 标签   基本的
-
-base 可以设置整体链接的打开状态   
-
-base 写到  <head>  </head>  之间
-
-把所有的连接 都默认添加 target="_blank"
-
- <img src="media/base.png" />
-
-## 课堂一练
-
- 1在HTML中，关于a标签说法不正确的是（）
-
-(A) a标签可以通过href属性跳转到另外一个页面
-
-(B) a标签可以通过targer属性设置在是否在新窗口中打开
-
-(C) a标签只能在当前页面设置锚点链接，让用户能够快速定位到目标内
-
-(D) a标签可以通过href="#"设置一个空链接
-
-2如果想跳转到当前页面里名为show的锚点，下列写法是正确的
-
-A  < a href=".show">跳转</a>
-
-B < a href="#show">跳转</a>
-
-C < a href=" show">跳转</a>
-
-D < a src=" #show">跳转</a>
-
- 
-
-3如果想跳转到同目录下的名为success.html文件里名为show的锚点，下列写法是正确的
-
-(A) < a href="success.html#show">跳转</a>
-
-(B)  < a href="#show">跳转</a> 
-
-(C)  < a href="success#show">跳转</a>
-(D) < a src="success.html#show">跳转</a>
-
-##  特殊字符标签 （理解）
-
- <img src="media/zifu.png" />
-
-## 注释标签
-
-在HTML中还有一种特殊的标签——注释标签。如果需要在HTML文档中添加一些便于阅读和理解但又不需要显示在页面中的注释文字，就需要使用注释标签。其基本语法格式如下：
-​        
-
-```html
-    <!-- 注释语句 -->   ctrl + /       或者 ctrl +shift + / 
-```
-
-注释内容不会显示在浏览器窗口中，但是作为HTML文档内容的一部分，也会被下载到用户的计算机上，查看源代码时就可以看到。
-
-注释重要性：
-
-
-
-<img src="media/zs.png" />
-
-# 路径(重点、难点)
-
-<img src="media/dt.png" width="400" />
-
-<img src="media/lj.png" />
-
-实际工作中，通常新建一个文件夹专门用于存放图像文件，这时再插入图像，就需要采用“路径”的方式来指定图像文件的位置。
-
-根目录  当前目录 
-
-
-
-路径可以分为： 相对路径和绝对路径
-
-
-
-## 相对路径
-
-以引用文件之网页所在位置为参考基础，而建立出的目录路径。因此，当保存于不同目录的网页引用同一个文件时，所使用的路径将不相同，故称之为相对路径。
-
-1. 图像文件和HTML文件位于同一文件夹：只需输入图像文件的名称即可，如&lt;img src="logo.gif" /&gt;。
-2. 图像文件位于HTML文件的下一级文件夹：输入文件夹名和文件名，之间用“/”隔开，如&lt;img src="img/img01/logo.gif" /&gt;。
-3. 图像文件位于HTML文件的上一级文件夹：在文件名之前加入“../” ，如果是上两级，则需要使用 “../ ../”，以此类推，如&lt;img src="../logo.gif" /&gt;。
-
-
-
-
-
-## 绝对路径
-
-绝对路径以Web站点根目录为参考基础的目录路径。之所以称为绝对，意指当所有网页引用同一个文件时，所使用的路径都是一样的
-
-“D:\web\img\logo.gif”，或完整的网络地址，例如“http://www.itcast.cn/images/logo.gif”。
-
-
-
-## 课堂一练
-
-1.**在下面结构中，哪种写法可以在index页面中有输出img.gif**
-
-![1512226080266](media/1512226080266.png)
-
-(A) <img src=”../image/img.gif” /> 		
-
-(B) <img src=”image/img.gif” /> 
-
-(C) <img src=”image../img.gif” />	
-
-(D) <img src=”img.gif/image” />
-
- 
-
-**2在下面结构中，哪种写法可以在index页面中有输出1.jpg**
-
-![1512226099480](media/1512226099480.png)
-
-(A) <img src=”../1/2/1.jpg” />		
-
-(B) <img src=”/1/2/1.jpg” />
-
-(C) <img src=”1/2/1.jpg” />	
-
-(D) <img src=”1.jpg” />
-
- 
-
-3在下面结构中哪种写法可以在index页面中有输出img.gif
-
-![1512226121609](media/1512226121609.png)
-
-(A) <img src=”demo/image/img.gif” /> 	
-
-(B) <img src=”image/img.gif” /> 
-
-(C) <img src=”image../img.gif” />	
-
-(D) <img src=”img.gif/image/demo” />
-
- 
-
-# 总结
-
-  每一天都有一个主题 我们HTML第一天的主题就是 <认识标签>
-
-学HTML 之前 觉得 很神秘  
-
-<img src="media/z.png" />
-
-等你学完之后忽然发现
-
-<img src="media/rh.jpg" width="615" />
-
-
-
-总结今天的思路贯穿线：
-
-<img src="media/a.png" width="1000" />
-
-# 列表标签
-
-什么是列表？
-
-<img src="media/list.png" />
-
-把…制成表,以表显示
-
-容器里面装载着文字或图表的一种形式，叫列表。
-
-列表最大的特点就是  整齐 、整洁、 有序
-
-## 无序列表 ul （重点）
-
-无序列表的各个列表项之间没有顺序级别之分，是并列的。其基本语法格式如下：
-
-```html
-<ul>
-  <li>列表项1</li>
-  <li>列表项2</li>
-  <li>列表项3</li>
-  ......
-</ul>
-```
-
-比如下面这些，新闻是没有顺序的，不用排队，先到先得，后发布先显示。
-
-<img src="media/ul.png" />
-
-脚下留心：
-
-```
- 1. <ul></ul>中只能嵌套<li></li>，直接在<ul></ul>标签中输入其他标签或者文字的做法是不被允许的。
- 2. <li>与</li>之间相当于一个容器，可以容纳所有元素。
- 3. 无序列表会带有自己样式属性，放下那个样式，一会让CSS来！
-```
-
-## 有序列表 ol （了解）
-<img src="media/gold.png" />
-
-
-有序列表即为有排列顺序的列表，其各个列表项按照一定的顺序排列定义，有序列表的基本语法格式如下：
-
-```html
-<ol>
-  <li>列表项1</li>
-  <li>列表项2</li>
-  <li>列表项3</li>
-  ......
+<div class="blog-content-box">
+	<div class="article-header-box">
+		<div class="article-header">
+			<div class="article-title-box">
+				<span class="article-type type-2 float-left">转</span>				<h1 class="title-article">前端html与css学习笔记总结篇(超详细)</h1>
+			</div>
+			<div class="article-info-box">
+				<div class="article-bar-top d-flex">
+       
+<div class="content content-post CENTER" style="width:760px; margin:60px auto 50px; border-left:none; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:14px">
+<div class="article-content" style="">
+<h3 id="第一部分-HTML" style="font-weight:normal; margin:28px 0px 15px; font-size:16px"><a name="t0"></a>
+第一部分 HTML</h3>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第一章-职业规划和前景" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第一章-职业规划和前景" rel="nofollow" class="headerlink" title="第一章 职业规划和前景" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第一章
+ 职业规划和前景</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">职业方向规划定位：</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">web</code>前端开发工程师</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">web</code>网站架构师</li><li style="list-style:none; position:relative; padding-left:14px">自己创业</li><li style="list-style:none; position:relative; padding-left:14px">转岗管理或其他<a target="_blank" id="more" style="background-color:transparent; color:rgb(26,188,156)"></a></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">web</code>前端开发的前景展望：</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">未来<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">IT</code>行业企业需求最多的人才</li><li style="list-style:none; position:relative; padding-left:14px">结合最新的<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">html5</code>抢占移动端的市场</li><li style="list-style:none; position:relative; padding-left:14px">自己创业做老板</li><li style="list-style:none; position:relative; padding-left:14px">随着互联网的普及<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">web</code>开发成为企业的宠儿和核心</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">web</code>职业发展目标：</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">第一、梳理知识架构</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">负责内容的<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">HTML</code></li><li style="list-style:none; position:relative; padding-left:14px">负责外观的<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>（层叠样式表）</li><li style="list-style:none; position:relative; padding-left:14px">负责行为的<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">js</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ps</code>切图</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">第二、分解目标（起步阶段、提升阶段、成型阶段）</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">起步阶段：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">基本知识的掌握</li><li style="list-style:none; position:relative; padding-left:14px">常用工具的掌握</li><li style="list-style:none; position:relative; padding-left:14px">沟通技巧的掌握（围绕客户的需求）</li><li style="list-style:none; position:relative; padding-left:14px">良好的开发习惯（加注释、对齐方式）</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">提升阶段：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">熟悉掌握<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">HTML</code>基本标签和属性</li><li style="list-style:none; position:relative; padding-left:14px">熟练掌握<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>的基本语法和使用</li><li style="list-style:none; position:relative; padding-left:14px">浏览器兼容和w3c标准的掌握</li><li style="list-style:none; position:relative; padding-left:14px">结合<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">html</code>+<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>+<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">js</code>开始系统项目的开发</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">成型阶段：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">精通<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">DIV</code>+<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">CCS</code>布局</li><li style="list-style:none; position:relative; padding-left:14px">精通<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>样式表控制<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">html</code>标签</li><li style="list-style:none; position:relative; padding-left:14px">熟悉运用<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">js</code>制作动态网站的效果</li><li style="list-style:none; position:relative; padding-left:14px">能独立开发完成网站</li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第二章-html基本结构" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第二章-html基本结构" rel="nofollow" class="headerlink" title="第二章 html基本结构" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第二章
+ html基本结构</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">认识HTML：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">html</code>不是一种编程语言，是一种标志语言</li><li style="list-style:none; position:relative; padding-left:14px">标记语言是由一套标识标签组成的</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">html</code>使用标签来描述网页</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">html</code>结构：</p>
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:689px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;html&gt;</div><div class="line" style="">    &lt;head&gt;&lt;/head&gt;</div><div class="line" style="">    &lt;body&gt;&lt;/body&gt;</div><div class="line" style="">&lt;/html&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">不成对出现的标签<br style="">
+<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;br&gt;</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;hr&gt;</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;meta&gt;</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;img&gt;</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;input..&gt;</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;option..&gt;</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;link&gt;</code></li></ul>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">HTML 基本标签的讲解：</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;html&gt;</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;head&gt;</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;body&gt;</code>标签</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;h1&gt;</code>—-<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;h6&gt;</code>仅仅用于标题文本，不要为了产生粗体文本使用它们</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;p&gt;</code>标签
+ 段落标签</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;strong&gt;&lt;b&gt;</code>标签</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">都会让文字产生加粗效果</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;strong&gt;</code>用于强调文本，强度更深，表示重要文本—&gt;用于<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">SEO</code>优化</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;b&gt;</code>只是视觉加粗效果—&gt;单纯为了产生加粗</li></ul>
+</li></ul>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;em&gt;</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;i&gt;</code>标签
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">em</code>用于强调文本</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">i</code>只是视觉斜体效果</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;strong&gt;</code>比<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;em&gt;</code>强调更强</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">特殊符号：
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&amp;nbsp</code>;
+ —-&gt;空格</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&amp;gt</code>;
+ —&gt;大于号</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&amp;lt</code>；—&gt;小于号</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&amp;quot</code>；—&gt;引号</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&amp;copy</code>;–&gt;版权号</li></ul>
+</li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第三章-html基本标签" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第三章-html基本标签" rel="nofollow" class="headerlink" title="第三章 html基本标签" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第三章
+ html基本标签</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">HTMl</code>基本标签：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">span</code>标签
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">对被用来组合文档中的行内元素</li><li style="list-style:none; position:relative; padding-left:14px">注意：span没有固定的格式表现，当对它应用样式时，才会产生视觉上的变化</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;pre&gt;</code>标签
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">文字的格式按源码的排版来显示，我们称之为预处理格式</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;a&gt;</code>标签—&gt;他有一个必不可少的属性
+ href</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">target</code>属性：</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">_self</code>(在原来页面打开)</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">_blank</code>（新窗口打开）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">_top</code>（打开时忽略所有的框架）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">_parent</code>（在父窗口中打开）</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">创建锚点和锚链接</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">锚点也是一种超链接，是页面内进行跳转的超链接
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">第一步：创建锚点&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;a
+ name="锚点名称"&gt;&lt;/a&gt;</code></li><li style="list-style:none; position:relative; padding-left:14px">第二步：使用创建好的锚点名称&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;a
+ href="#锚点名称"&gt;内容&lt;/a&gt;</code></li></ul>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">marquee</code>标签
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">可以创建一个内容滚动效果</li></ul>
+</li></ul>
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:689px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;marquee direction="down" loop="4" onmouseover=this.stop() onmouseout=this.start()&gt;&lt;/marquee&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">direction</code>&nbsp;表示滚动方向，取值有（left,right,up,down,默认left）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">loop</code>表示滚动循环的次数，默认为无限循环</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:689px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">onmouseover=this.stop()  onmouseover=this.start()  scrollamout="1"(滚动速度)</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">表示当鼠标移上区域的时候停止滚动，鼠标移开继续滚动</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第四章-img图片标签与路径" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第四章-img图片标签与路径" rel="nofollow" class="headerlink" title="第四章 img图片标签与路径" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第四章
+ img图片标签与路径</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">图片标签与路径：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">常见图片格式&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">jpg</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">png</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">gif</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">Gif</code>&nbsp;（只支持全透明）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">Jpeg</code>&nbsp;/<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">jpg</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">Png</code>&nbsp;半/全透明都支持</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">图片标签写法 ：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;img
+ src="" alt="" width="" height="" /&gt;</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">图片四要素：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">src=""</code>&nbsp;图片路径</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">alt=""</code>&nbsp;图片含义</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">width=""</code>&nbsp;图片宽度
+ 和图片大小保持一致</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">height=""</code>&nbsp;图片高度
+ 和图片大小保持一致</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">title=""</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">路径知识：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">相对路径、绝对路径：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">相对路径：(Relative Path) 相对于该文件的路径；</li><li style="list-style:none; position:relative; padding-left:14px">绝对路径：(Absolute Path) 从磁盘出发的路径；</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;img
+ src="" …… align="" /&gt;</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">align</code>属性–设置图片与后面文字的位置关系<br style="">
+值–<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">top</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">bottom</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">middle</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">absmiddle</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">left</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">right</code></p>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">在静态页面中：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">/</code>开头表示根目录；</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">./</code>表示当前目录；（斜画线前面一个点）</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">../</code>上级目录；（斜画线前面两个点）</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">直接用文件名不带/也表示同一目录</p>
+</li></ul>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">这些都是相对于当前文件的位置来说的，如果用绝对路径的话就是写全了。</li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第五章-三种列表的讲解" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第五章-三种列表的讲解" rel="nofollow" class="headerlink" title="第五章 三种列表的讲解" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第五章
+ 三种列表的讲解</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">三种列表的知识讲解：
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;ul&gt;</code>无序列表
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">无序列表是一个没有顺序项目的列表，此列表项默认粗体圆点进行标识</li></ul>
+</li></ul>
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:689px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;ul&gt;</div><div class="line" style="">   &lt;li&gt;&lt;/li&gt;</div><div class="line" style="">   &lt;li&gt;&lt;/li&gt;</div><div class="line" style="">   &lt;li&gt;&lt;/li&gt;</div><div class="line" style="">&lt;/ul&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<ol style="padding-left:20px">
+有序列表
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">有序列表也是一列项目，只是列表项目使用的是数字进行标记。 有序列表始于&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;ol&gt;</code>&nbsp;标签。每个列表项始于&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;li&gt;</code>标签。</li></ul>
 </ol>
-```
-
-  所有特性基本与ul 一致。  
-
-  但是实际工作中， 较少用 ol img src="media/1.jpg" />
-
-
-
-## 自定义列表（理解）
-
-定义列表常用于对术语或名词进行解释和描述，定义列表的列表项前没有任何项目符号。其基本语法如下：
-
-```html
-<dl>
-  <dt>名词1</dt>
-  <dd>名词1解释1</dd>
-  <dd>名词1解释2</dd>
-  ...
-  <dt>名词2</dt>
-  <dd>名词2解释1</dd>
-  <dd>名词2解释2</dd>
-  ...
-</dl>
-```
-
- <img src="media/2.jpg" /> 
-
-
-
-用的还可以：
-
-<img src="media/mix.png" />
-
-
-
-
-
-# 表格 table(会使用)
-
-![img](http://zcr4.ncfstatic.com/attachment/201403/27/10/5333888008f05_thumb_670x0.jpg)
-
-
-
-存在即是合理的。  表格的现在还是较为常用的一种标签，但不是用来布局，常见处理、显示表格式数据。
-
-<img src="media/table.png" />
-
-ps:  这些地方用表格，你会觉得生活还是那么美好。。。。忍不住想说  PPAP i hava a pen  
-
-
-
-## 创建表格
-
-在HTML网页中，要想创建表格，就需要使用表格相关的标签。创建表格的基本语法格式如下：
-
-```html
-<table>
-  <tr>
-    <td>单元格内的文字</td>
-    ...
-  </tr>
-  ...
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:689px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;ol&gt;</div><div class="line" style="">   &lt;li&gt;内容一&lt;/li&gt;</div><div class="line" style="">   &lt;li&gt;内容二&lt;/li&gt;</div><div class="line" style="">   &lt;li&gt;内容三&lt;/li&gt;</div><div class="line" style="">&lt;/ol&gt;</div></pre>
+</td>
+</tr>
+</tbody>
 </table>
-```
-
-在上面的语法中包含三对HTML标签，分别为 &lt;table&gt;</table&gt;、&lt;tr&gt;</tr&gt;、&lt;td&gt;</td&gt;，他们是创建表格的基本标签，缺一不可，下面对他们进行具体地解释
-
-
-
-~~~
-1.table用于定义一个表格。
-
-2.tr 用于定义表格中的一行，必须嵌套在 table标签中，在 table中包含几对 tr，就有几行表格。
-
-3.td /td：用于定义表格中的单元格，必须嵌套在<tr></tr>标签中，一对 <tr> </tr>中包含几对<td></td>，就表示该行中有多少列（或多少个单元格）。
-~~~
-
-注意：
-
-```
-1. <tr></tr>中只能嵌套<td></td>
-```
-
-```
-2. <td></td>标签，他就像一个容器，可以容纳所有的元素
-```
-
-
-
-## 表格属性
-
-<img src="media/tt.png" />
-
-## 表头标签
-
-表头一般位于表格的第一行或第一列，其文本加粗居中，如下图所示，即为设置了表头的表格。设置表头非常简单，只需用表头标签&lt;th&gt;</th&gt;替代相应的单元格标签&lt;td&gt;</td&gt;即可。
-
- <img src="media/th.png" />
-
-## 表格结构（了解）
-
-```
-在使用表格进行布局时，可以将表格划分为头部、主体和页脚（页脚因为有兼容性问题，我们不在赘述），具体 如下所示：
-
-<thead></thead>：用于定义表格的头部。
-
-必须位于<table></table> 标签中，一般包含网页的logo和导航等头部信息。
-
-
-<tbody></tbody>：用于定义表格的主体。
-
-位于<table></table>标签中，一般包含网页中除头部和底部之外的其他内容。
-```
-
-
-
-
-
-<img src="media/thead.png" />
-
-## 表格标题
-
-**表格的标题： caption**
-
-**定义和用法**
-
-caption 元素定义表格标题。
-
-```html
-<table>
-   <caption>我是表格标题</caption>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">列表符号</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">无序列表-列表符号:</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type="circle"</code>&nbsp;空心圆&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type=“disc”</code>&nbsp;实心圆
+ 默认值&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type="square"</code>&nbsp;方块符</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">有序列表-列表符号</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type="A"</code>&nbsp;A
+ B C D</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type="a"</code>&nbsp;a
+ b c d</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type="1"</code>&nbsp;1
+ 2 3 4 默认值type=”I” I II III type=”i” i ii iii</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">列表嵌套</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">无序列表-嵌套</p>
+</li></ul>
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div><div class="line" style="">6</div><div class="line" style="">7</div><div class="line" style="">8</div><div class="line" style="">9</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:689px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;ul&gt;</div><div class="line" style=""> &lt;li&gt;柚子</div><div class="line" style="">  &lt;ul&gt;</div><div class="line" style="">   &lt;li&gt;沙田柚&lt;/li&gt;</div><div class="line" style="">   &lt;li&gt;蜜柚&lt;/li&gt;</div><div class="line" style="">  &lt;/ul&gt;</div><div class="line" style=""> &lt;/li&gt;</div><div class="line" style=""> &lt;li&gt;荔枝&lt;/li&gt;</div><div class="line" style=""> &lt;li&gt;苹果&lt;/li&gt;&lt;/ul&gt;</div></pre>
+</td>
+</tr>
+</tbody>
 </table>
-```
-
-caption 标签必须紧随 table 标签之后。您只能对每个表格定义一个标题。通常这个标题会被居中于表格之上。
-
-## 合并单元格(难点)
-
-跨行合并：rowspan    跨列合并：colspan
-
-合并单元格的思想：
-
-​     将多个内容合并的时候，就会有多余的东西，把它删除。    例如 把 3个 td 合并成一个， 那就多余了2个，需要删除。
-
-​     公式：  删除的个数  =  合并的个数  - 1   
-
-   合并的顺序 先上   先左 
-
-## 总结表格
-
-1. 表格提供了HTML 中定义表格式数据的方法。
-
-2. 表格中由行中的单元格组成。
-
-3. 表格中没有列元素，列的个数取决于行的单元格个数。
-
-4. 表格不要纠结于外观，那是CSS 的作用。
-
-   ​
-
-   **表格的学习要求：  能手写表格结构，并且能合并单元格。**
-
-# 表单标签(掌握)
-
-现实中的表单，类似我们去银行办理信用卡填写的单子。 如下图
-
-<img src="media/car.jpg"  width="500" />
-
-目的是为了收集用户信息。
-
-在我们网页中， 我们也需要跟用户进行交互，收集用户资料，此时也需要表单。
-
-在HTML中，一个完整的表单通常由表单控件（也称为表单元素）、提示信息和表单域3个部分构成。
-
-<img src="media/bd.png" />
-
-  表单控件：
-
-​       包含了具体的表单功能项，如单行文本输入框、密码输入框、复选框、提交按钮、重置按钮等。
-
-  提示信息：
-
-​        一个表单中通常还需要包含一些说明性的文字，提示用户进行填写和操作。
-
-  表单域：  
-
-​      他相当于一个容器，用来容纳所有的表单控件和提示信息，可以通过他定义处理表单数据所用程序的url地址，以及数据提交到服务器的方法。如果不定义表单域，表单中的数据就无法传送到后台服务器。
-
-## input 控件(重点)
-
-在上面的语法中，&lt;input /&gt;标签为单标签，type属性为其最基本的属性，其取值有多种，用于指定不同的控件类型。除了type属性之外，&lt;input /&gt;标签还可以定义很多其他的属性，其常用属性如下表所示。
-
-<img src="media/input.png" />
-
-##  label标签(理解)
-
-label 标签为 input 元素定义标注（标签）。
-
-作用：  用于绑定一个表单元素, 当点击label标签的时候, 被绑定的表单元素就会获得输入焦点
-
-如何绑定元素呢？
-
-for 属性规定 label 与哪个表单元素绑定。
-
-```html
-<label for="male">Male</label>
-<input type="radio" name="sex" id="male" value="male">
-```
-
-## textarea控件(文本域)
-
-如果需要输入大量的信息，就需要用到&lt;textarea&gt;&lt;/textarea&gt;标签。通过textarea控件可以轻松地创建多行文本输入框，其基本语法格式如下：
-
-```html
-<textarea cols="每行中的字符数" rows="显示的行数">
-  文本内容
-</textarea>
-```
-
-<img src="media/textarea.png" />
-
-## 下拉菜单
-
-使用select控件定义下拉菜单的基本语法格式如下
-
-```html
-<select>
-  <option>选项1</option>
-  <option>选项2</option>
-  <option>选项3</option>
-  ...
-</select>
-```
-
-注意：
-
-1. &lt;select&gt;</select&gt;中至少应包含一对&lt;option></option&gt;。
-2. 在option 中定义selected =" selected "时，当前项即为默认选中项。
-
-## 表单域
-
-在HTML中，form标签被用于定义表单域，即创建一个表单，以实现用户信息的收集和传递，form中的所有内容都会被提交给服务器。创建表单的基本语法格式如下：
-
-```html
-<form action="url地址" method="提交方式" name="表单名称">
-  各种表单控件
-</form>
-```
-
-常用属性：
-
-1. Action
-   在表单收集到信息后，需要将信息传递给服务器进行处理，action属性用于指定接收并处理表单数据的服务器程序的url地址。
-2. method
-   用于设置表单数据的提交方式，其取值为get或post。
-3. name
-   用于指定表单的名称，以区分同一个页面中的多个表单。
-
-注意：  每个表单都应该有自己表单域。
-
-# 查文档
-
-经常查阅文档是一个非常好的学习习惯。
-
-W3C :  http://www.w3school.com.cn/
-
-MDN: https://developer.mozilla.org/zh-CN/
-
-
-
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">有序列表-嵌套</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div><div class="line" style="">6</div><div class="line" style="">7</div><div class="line" style="">8</div><div class="line" style="">9</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:689px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;ol&gt;</div><div class="line" style=""> &lt;li&gt;茶</div><div class="line" style="">  &lt;ul&gt;</div><div class="line" style="">   &lt;li&gt;红茶&lt;/li&gt;</div><div class="line" style="">   &lt;li&gt;绿茶&lt;/li&gt;</div><div class="line" style="">  &lt;/ul&gt;</div><div class="line" style=""> &lt;/li&gt;</div><div class="line" style=""> &lt;li&gt;果汁&lt;/li&gt;</div><div class="line" style=""> &lt;li&gt;牛奶&lt;/li&gt;&lt;/ol&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">定义列表
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">定义列表不仅仅是一列项目，而是项目及其注释的组合。定义列表以&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;dl&gt;</code>&nbsp;标签开始。每个定义列表项以&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;dt&gt;</code>开始。每个自定义列表项的定义以&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;dd&gt;</code>&nbsp;开始。</li></ul>
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div><div class="line" style="">6</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:689px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;dl&gt;  </div><div class="line" style="">     &lt;dt&gt;pc网页制作&lt;/dt&gt;  </div><div class="line" style="">     &lt;dd&gt;学习DIV+CSS JS JQ 项目实战&lt;/dd&gt;  </div><div class="line" style="">     &lt;dt&gt;手机网页制作&lt;/dt&gt;  </div><div class="line" style="">     &lt;dd&gt;手机网页制作实战&lt;/dd&gt;</div><div class="line" style="">&lt;/dl&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">dd</code>是对<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">dt</code>的解释</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;
+ dl&gt;&lt; /dl&gt;</code>用来创建一个普通的列表,</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;
+ dt&gt;&lt; /dt&gt;</code>用来创建列表中的上层项目，</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;
+ dd&gt;&lt; /dd&gt;</code>用来创建列表中最下层项目，</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;
+ dt&gt;&lt; /dt&gt;</code>和<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;
+ dd&gt;&lt; /dd&gt;</code>都必须放在<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;
+ dl&gt;&lt; /dl&gt;</code>标志对之间。</li></ul>
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div><div class="line" style="">6</div><div class="line" style="">7</div><div class="line" style="">8</div><div class="line" style="">9</div><div class="line" style="">10</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:680px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;dl&gt;</div><div class="line" style="">    &lt;dt&gt;中国城市&lt;/dt&gt;</div><div class="line" style="">    &lt;dd&gt;北京 &lt;/dd&gt;</div><div class="line" style="">    &lt;dd&gt;上海 &lt;/dd&gt;</div><div class="line" style="">    &lt;dd&gt;广州 &lt;/dd&gt;</div><div class="line" style="">    &lt;dt&gt;美国城市&lt;/dt&gt;</div><div class="line" style="">    &lt;dd&gt;华盛顿 &lt;/dd&gt;</div><div class="line" style="">    &lt;dd&gt;芝加哥 &lt;/dd&gt;</div><div class="line" style="">    &lt;dd&gt;纽约 &lt;/dd&gt;</div><div class="line" style="">&lt;/dl&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">dl</code>是d<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">efinition
+ list</code>的缩写</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">dt</code>是<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">definition
+ title</code>的缩写</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">dd</code>是d<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">efinition
+ description</code>的缩写</li></ul>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">list-style</code>属性具有三个属性分量：</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">list-style-position</code>&nbsp;：设置列表项图标的位置，位于文本内或者文本外</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">list-style-type</code>：
+ 设置列表项图标的类型</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">list-style-image</code>：使用图像设置列表项图标</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第六章-表单元素-上" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第六章-表单元素-上" rel="nofollow" class="headerlink" title="第六章 表单元素(上)" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第六章
+ 表单元素(上)</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">表单标签:</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;form&gt;</code>表单标签</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;form&gt;</code>表单是一个包含表单元素的区域，包括起来的都是表单的内容
+<table style="border-collapse:collapse; border-spacing:0px; width:686px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:647px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;form&gt;</div><div class="line" style=""> &lt;input type="text"/&gt;</div><div class="line" style="">&lt;/form&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</li></ul>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">HTML标签 -&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">Action</code>和确认按钮：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">当用户单击确认按钮时，表单的内容会被传送到另一个文件。表单的动作属性定义了目的文件的文件名。由动作属性定义的这个文件通常会对接收到的输入数据进行相关的处理。</li></ul>
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:689px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;form action="html.do" method="get"&gt;    </div><div class="line" style="">        username:  &lt;input type="text" name="user" /&gt;   </div><div class="line" style="">        &lt;input type="submit" value="提  交" /&gt;</div><div class="line" style="">&lt;/form&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">HTML</code>标签
+ - 隐藏域隐藏标签：</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">隐藏域在页面中对于用户是不可见的，在表单中插入隐藏域的目的在于收集或发送信息，以利于被处理表单的程序所使用。浏览者单击发送按钮发送表单的时候，隐藏域的信息也被一起发送到服务器</p>
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:689px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;form&gt;        </div><div class="line" style="">     &lt;input type="hidden" name="hid" value="value"&gt;</div><div class="line" style="">&lt;/form&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;input&gt;</code>标签的掌握</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">常用<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type</code>类型：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;input
+ type="" name="" value="" /&gt;</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type="text"</code>&nbsp;单行文本输入框</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type="password"</code>&nbsp;密码（<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">maxlength=""</code>）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type="radio"</code>&nbsp;单项选择（<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">checked="checked"</code>）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type="checkbox"</code>&nbsp;多项选择</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type="button"</code>&nbsp;按钮</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type="submit"</code>&nbsp;提交&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type="image"</code>图片提交</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type="file"</code>&nbsp;上传文件</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type="reset"</code>重置</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">type="hidden"</code>&nbsp;隐藏</li></ul>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">关于表单中的设置默认值：</p>
+<table style="border-collapse:collapse; border-spacing:0px; width:714px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:675px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;input type="text" name="" value="今天心情不错" /&gt;</div><div class="line" style="">&lt;input type="radio" name="" value="" checked="checked"&gt;</div><div class="line" style="">&lt;input type="checkbox" name="" value="" checked="checked"&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:689px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;select name="" &gt;</div><div class="line" style=""> &lt;option  value=""&gt;&lt;/option&gt;</div><div class="line" style=""> &lt;option  value="" selected="selected"&gt;&lt;/option&gt;</div><div class="line" style="">&lt;select&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">textarea</code>没有默认值</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;label&gt;</code>标签的使用</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;label&gt;&lt;/label&gt;</code></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">label</code>&nbsp;元素不会向用户呈现任何特殊效果。</li><li style="list-style:none; position:relative; padding-left:14px">不过，它为鼠标用户改进了可用性。</li><li style="list-style:none; position:relative; padding-left:14px">如果您在&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">label</code>&nbsp;元素内点击文本，就会触发此控件。</li><li style="list-style:none; position:relative; padding-left:14px">就是说，当用户选择该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上。</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;label&gt;</code>&nbsp;标签的<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">for</code>&nbsp;属性应当与相关元素的&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">id</code>属性相同。</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">例子：（重要—注册表单–用户体验–必做）</p>
+<table style="border-collapse:collapse; border-spacing:0px; width:700px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:661px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;p&gt;单向选择&lt;/p&gt;</div><div class="line" style="">&lt;label for="male"&gt;男：&lt;/label&gt;&lt;input type="radio" name="sex" id="male"/&gt;</div><div class="line" style="">&lt;label for="nv"&gt;女：&lt;/label&gt;&lt;input type="radio" name="sex"checked="check"/&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第七章-表单和表格-下" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第七章-表单和表格-下" rel="nofollow" class="headerlink" title="第七章 表单和表格(下)" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第七章
+ 表单和表格(下)</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">表单和表格标签：
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;textarea&gt;</code>文本域标签</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;textarea&gt;</code>标签：</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;textarea&gt;&lt;/textarea&gt;</code>是文本域标签，可以在其中插入一段文字内容，它有两个常用属性<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">rows</code>和<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">cols</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">注意：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">rows</code>表示这个文本域有多少行</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">cols</code>表示这个文本域有多少列</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">除了这两个属性它还有<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">readonly</code>（只读，文本域的内容无法改变，相当于协议）和<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">title</code>（鼠标放上提示）</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;select&gt;</code>标签的掌握</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">注：当提交表单时，浏览器会提交选定的项目，或者收集用逗号分隔的多个选项，将其合成一个单独的参数列表，并且在将&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;select&gt;</code>&nbsp;表单数据提交给服务器时包括&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">name</code>属性
+<table style="border-collapse:collapse; border-spacing:0px; width:700px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div><div class="line" style="">6</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:661px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;form&gt;      </div><div class="line" style="">    &lt;select name=""  id=""&gt;</div><div class="line" style="">         &lt;option value="1"&gt;1月&lt;/option&gt;  </div><div class="line" style="">          &lt;option value="2"&gt;2月&lt;/option&gt;      </div><div class="line" style="">&lt;/select&gt;</div><div class="line" style="">&lt;/form&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">常用到的属性：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">disabled=“disabled”
+ name="sel" size="2"</code></p>
+</li></ul>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;table&gt;</code>表格标签</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;table&gt;</code>表格标签：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;table&gt;</code>是表格标签，可以用它定义一个表格。</p>
+<table style="border-collapse:collapse; border-spacing:0px; width:714px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div><div class="line" style="">6</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:675px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;table border="1"&gt;</div><div class="line" style="">    &lt;tr&gt;</div><div class="line" style="">    &lt;td&gt;姓名&lt;/td&gt;</div><div class="line" style="">    &lt;td&gt;性别&lt;/td&gt;</div><div class="line" style="">    &lt;/tr&gt;</div><div class="line" style="">&lt;/table&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">注意：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;table&gt;</code>的<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border</code>属性不能少</p>
+</li></ul>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;tr&gt;</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;td&gt;</code>标签的使用</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;tr&gt;</code>行标签：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;tr&gt;</code>可以定义表格中的一行，一个&lt;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">tr&gt;&lt;/tr&gt;</code>表示一行。</li></ul>
+</li></ul>
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div><div class="line" style="">6</div><div class="line" style="">7</div><div class="line" style="">8</div><div class="line" style="">9</div><div class="line" style="">10</div><div class="line" style="">11</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:680px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;table border="1"&gt;</div><div class="line" style="">&lt;tr&gt;</div><div class="line" style=""> &lt;td&gt;姓名&lt;/td&gt;</div><div class="line" style=""> &lt;td&gt;性别&lt;/td&gt;</div><div class="line" style="">&lt;/tr&gt;</div><div class="line" style=""></div><div class="line" style="">&lt;tr&gt;</div><div class="line" style=""> &lt;td&gt;姓名&lt;/td&gt;</div><div class="line" style=""> &lt;td&gt;性别&lt;/td&gt;</div><div class="line" style="">&lt;/tr&gt;</div><div class="line" style="">&lt;/table&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;td&gt;</code>单元格标签:</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;td&gt;</code>可以定义表格中的一个单元格，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;td&gt;&lt;/td&gt;</code>表示一个单元格。
+<table style="border-collapse:collapse; border-spacing:0px; width:700px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div><div class="line" style="">6</div><div class="line" style="">7</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:661px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;table border="1"&gt;</div><div class="line" style="">&lt;tr&gt;</div><div class="line" style="">&lt;td &gt;姓名&lt;/td&gt;</div><div class="line" style="">&lt;td&gt;性别&lt;/td&gt;</div><div class="line" style="">&lt;td&gt;爱好&lt;/td&gt;</div><div class="line" style="">&lt;/tr&gt;</div><div class="line" style="">&lt;/table&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+</li></ul>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border-collapse</code>&nbsp;属性设置是否将表格边框折叠为单一边框：</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border-collapse:collapse</code>;</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">colspan</code>左右合并</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">rowspan</code>上下合并</li></ul>
+</li></ul>
+<p style="font-size:15px; line-height:2em; margin-bottom:20px; color:rgb(85,85,85); margin-top:25px">
+<span style="color:rgb(0,0,0)">第一部分总结</span>：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85); margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">非可视化标签：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">head</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">meta</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">style</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">scrpit.</code>..</li><li style="list-style:none; position:relative; padding-left:14px">可视化标签：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">img</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">div</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">span</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ul</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">li</code>…</li><li style="list-style:none; position:relative; padding-left:14px">只有可视化标签，才能用<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>改变它</li><li style="list-style:none; position:relative; padding-left:14px">单标签：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">meta</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">link</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">base</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">img</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">input</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">br</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">hr</code></li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">双标签：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">html</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">head</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">body</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">div</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">p</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">span</code>&nbsp;..<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ul</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">li</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ol</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">dl</code>&nbsp;….</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">常用可视化标签</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><span style="color:rgb(0,0,0)"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">div</code></span>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">一般用它来布局</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px"><span style="color:rgb(0,0,0)">a</span>&nbsp;超链接标签
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">href</code>*属性：设置跳转的网页地址</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">target</code>属性：设置跳转的目标</li><li style="list-style:none; position:relative; padding-left:14px">结论：凡事页面可以点击跳转或者表单提交的文字，都用<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a</code>标签</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px"><span style="color:rgb(0,0,0)"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">img</code></span>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">src</code>*属性用来设置图片的url数据</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">alt</code>提供给搜索引擎搜索的</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">width</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">height</code></li><li style="list-style:none; position:relative; padding-left:14px">结论 ：显示图片</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px"><span style="color:rgb(0,0,0)">ul li</span>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">列表</li><li style="list-style:none; position:relative; padding-left:14px">结论：只要将来设计页面中有固定样式的列表，就用ul和li</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px"><span style="color:rgb(0,0,0)"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">table</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">caption</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">tr</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">td
+ (th)</code></span>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">慢慢已经被淘汰了 被ul li代替</li><li style="list-style:none; position:relative; padding-left:14px">如果是合并竖排的就是合并行（<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">rowspan</code>）</li><li style="list-style:none; position:relative; padding-left:14px">如果是合并横排的就是合并列（<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">colspan</code>）</li></ul>
+</li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<p style="font-size:15px; line-height:2em; margin-bottom:20px; color:rgb(85,85,85)">
+<span style="color:rgb(0,0,0)">HTML部分导图总结</span></p>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><a target="_blank" href="http://www.html5star.com/manual/html5label-meaning/" rel="nofollow" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)">HTML5标签集合</a></li></ul>
+<p style="font-size:15px; line-height:2em; margin-bottom:20px; color:rgb(85,85,85); margin-top:25px">
+<img src="http://upload-images.jianshu.io/upload_images/1480597-1950ccf50810a92b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" style="border:0px; max-width:100%; height:auto"></p>
+<p style="font-size:15px; line-height:2em; margin-bottom:20px; color:rgb(85,85,85)">
+<img src="http://upload-images.jianshu.io/upload_images/1480597-3d15eb9c7be0cb65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" style="border:0px; max-width:100%; height:auto"></p>
+<p style="font-size:15px; line-height:2em; margin-bottom:20px; color:rgb(85,85,85)">
+<img src="http://upload-images.jianshu.io/upload_images/1480597-4b0073fd050ba4f3.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" style="border:0px; max-width:100%; height:auto"></p>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h3 id="第二部分-CSS" style="font-weight:normal; margin:28px 0px 15px; font-size:16px"><a name="t1"></a>
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第二部分-CSS" rel="nofollow" class="headerlink" title="第二部分 CSS" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第二部分
+ CSS</h3>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第八章-css基础知识" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第八章-css基础知识" rel="nofollow" class="headerlink" title="第八章 css基础知识" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第八章
+ css基础知识</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>基础知识：
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>样式表的定义</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>：（Cascading
+ Style Sheets）层叠样式表；</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">分类及位置：内部样式<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">-head</code>区域<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">style</code>标签里面
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">外部样式-<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">link</code>调用</li><li style="list-style:none; position:relative; padding-left:14px">内联样式-标签元素里面</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>内的注释：/<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">*</code>注释内容<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">*</code>/</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>样式表的语法</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">CSS</code>规则由两个主要的部分构成：要添加样式的盒子名或者标签名、和要添加的样式。</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">盒子名或者标签名{属性:值;}</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">CSS中几种颜色的表示方法</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><span style="color:rgb(0,0,0)">用颜色名表示</span>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">有17个预先确定的颜色，它们是
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">aqua</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">black</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">blue</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">fuchsia</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">gray</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">green</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">lime</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">maroon</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">navy</code>,<br style="">
+　　<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">olive</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">orange,</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">purple</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">red</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">silver</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">teal</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">white</code>,
+ and&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">yellow</code></li></ul>
+</li></ul>
+</li></ul>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">用十六进制的颜色值表示(红、绿、蓝)</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">#FF0000</code>或者<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">#F00</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">用rgb(r,g,b)函数表示</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">如：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">rgb(255,255,0)</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">用hsl(Hue,Saturation,Lightness)函数表示（色调、饱和度、亮度)</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">如：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">hsl(120,100%,100%)</code>,色调0代表红色，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">120</code>代表绿色，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">240</code>代表<br style="">
+蓝色</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">用<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">rgba(r,g,b,a)</code>函数表示</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">其中<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a</code>表示的是改颜色的透明度，取值范围是<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">0~1</code>，其中<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">0</code>代表完全透明</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">用hsla(Hue,Saturation,Lightness,alpha)函数表示</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">色调、饱和度、亮度、透明度</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">例子</li></ul>
+</li></ul>
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div><div class="line" style="">6</div><div class="line" style="">7</div><div class="line" style="">8</div><div class="line" style="">9</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:689px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">  <span class="tag" style="color:rgb(41,115,183)">&lt;<span class="name" style="color:rgb(82,82,82)">div</span> <span class="attr" style="">style</span>=<span class="string" style="color:rgb(26,188,156)">"position:absolute;top:0px"</span>&gt;</span></div><div class="line" style="">	<span class="tag" style="color:rgb(41,115,183)">&lt;<span class="name" style="color:rgb(82,82,82)">div</span> <span class="attr" style="">style</span>=<span class="string" style="color:rgb(26,188,156)">"background-color:gray;"</span>&gt;</span>background-color:gray<span class="tag" style="color:rgb(41,115,183)">&lt;/<span class="name" style="color:rgb(82,82,82)">div</span>&gt;</span></div><div class="line" style="">	<span class="tag" style="color:rgb(41,115,183)">&lt;<span class="name" style="color:rgb(82,82,82)">div</span> <span class="attr" style="">style</span>=<span class="string" style="color:rgb(26,188,156)">"background-color:#F00;"</span>&gt;</span>background-color:#F00<span class="tag" style="color:rgb(41,115,183)">&lt;/<span class="name" style="color:rgb(82,82,82)">div</span>&gt;</span></div><div class="line" style="">	<span class="tag" style="color:rgb(41,115,183)">&lt;<span class="name" style="color:rgb(82,82,82)">div</span> <span class="attr" style="">style</span>=<span class="string" style="color:rgb(26,188,156)">"background-color:#ffff00;"</span>&gt;</span>background-color:#ffff00<span class="tag" style="color:rgb(41,115,183)">&lt;/<span class="name" style="color:rgb(82,82,82)">div</span>&gt;</span></div><div class="line" style="">	<span class="tag" style="color:rgb(41,115,183)">&lt;<span class="name" style="color:rgb(82,82,82)">div</span> <span class="attr" style="">style</span>=<span class="string" style="color:rgb(26,188,156)">"background-color:rgb(255,0,255);"</span>&gt;</span>background-color:rgb(255,0,255)<span class="tag" style="color:rgb(41,115,183)">&lt;/<span class="name" style="color:rgb(82,82,82)">div</span>&gt;</span></div><div class="line" style="">	<span class="tag" style="color:rgb(41,115,183)">&lt;<span class="name" style="color:rgb(82,82,82)">div</span> <span class="attr" style="">style</span>=<span class="string" style="color:rgb(26,188,156)">"background-color:hsl(120,80%,50%);"</span>&gt;</span>background-color:hsl(120,80%,50%)<span class="tag" style="color:rgb(41,115,183)">&lt;/<span class="name" style="color:rgb(82,82,82)">div</span>&gt;</span></div><div class="line" style="">	<span class="tag" style="color:rgb(41,115,183)">&lt;<span class="name" style="color:rgb(82,82,82)">div</span> <span class="attr" style="">style</span>=<span class="string" style="color:rgb(26,188,156)">"background-color:rgba(255,0,255,0.5);"</span>&gt;</span>background-color:rgba(255,0,255,0.5)<span class="tag" style="color:rgb(41,115,183)">&lt;/<span class="name" style="color:rgb(82,82,82)">div</span>&gt;</span></div><div class="line" style="">	<span class="tag" style="color:rgb(41,115,183)">&lt;<span class="name" style="color:rgb(82,82,82)">div</span> <span class="attr" style="">style</span>=<span class="string" style="color:rgb(26,188,156)">"background-color:hsla(120,80%,50%,0.5);"</span>&gt;</span>background-color:hsla(120,80%,50%,0.5)<span class="tag" style="color:rgb(41,115,183)">&lt;/<span class="name" style="color:rgb(82,82,82)">div</span>&gt;</span></div><div class="line" style=""><span class="tag" style="color:rgb(41,115,183)">&lt;/<span class="name" style="color:rgb(82,82,82)">div</span>&gt;</span></div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="font-size:15px; line-height:2em; margin-bottom:20px; color:rgb(85,85,85)">
+<img src="http://upload-images.jianshu.io/upload_images/1480597-39e61a813f637282.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" style="border:0px; max-width:100%; height:auto"></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85); margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">内部样式表
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">当单个页面需要设置样式时，就应该使用内部样式表。</li><li style="list-style:none; position:relative; padding-left:14px">使用&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;style&gt;&lt;/style&gt;</code>标签在文档<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;head&gt;&lt;/head&gt;</code>里面定义内部样式表</li></ul>
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:689px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;head&gt;</div><div class="line" style=""> &lt;style type="text/css" &gt;</div><div class="line" style="">  p{color:red;}</div><div class="line" style=""> &lt;/style&gt;</div><div class="line" style="">&lt;/head&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">从外部引入到样式分为两种：（注意写在<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">head</code>标签里面）</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">当样式需要应用于很多页面时，就需要用到外部样式表，首先需要创建一个<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>文件，然后引用到我们的页面中。</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">Link</code>样式表式：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;link
+ rel=”stylesheet” type=”text/css” href=”my.css”(href表示路径)&gt;</code></p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">Html</code>式：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;style
+ type="text/css"&gt;@import url("css.css");&gt;&lt;/style&gt;</code></p>
+</li></ul>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">内联样式表（优先级高）</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">写在标签里面的样式</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">如：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;p
+ style="color:red;"&gt;&lt;/p&gt;</code></p>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">表示给<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">p</code>标签里面的文字颜色设置为红色</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">区别：外链样式与导入样式</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">link</code>标签是属于<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">xhtml</code>范畴，而<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">@import</code>则是<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css2.1</code>中特有的。<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">link</code>标签除了可以加载<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">CSS</code>外，还可以做很多其它的事情，比如定义<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">RSS</code>，定义<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">rel</code>连接属性等，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">@import</code>就只能加载<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">CSS</code>了。</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">加载的顺序的区别，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">link</code>加载的<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>时，是一种并行(没有尝试是否是这样)加载<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">CSS</code>方式，而<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">@impor</code>则在整个页面加载完成后才加载。</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">兼容性的区别，因<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">@import``CSS2.1</code>才特有的，所以对于不兼容<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">CSS2.1</code>的浏览器来说，无效。</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">在样式控制上(比如动态改变网页的布局时,使用<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">javascript</code>操作<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">DOM</code>)的区别，此时<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">@import</code>就无能为力了。</p>
+</li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><span style="color:rgb(0,0,0)">样式的优先级补充</span>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">相同权值情况下，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">CSS</code>样式的优先级总结来说，就是——就近原则（离被设置元素越近优先级别越高）：
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">内联样式表（标签内部）</code>&nbsp;&gt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">嵌入样式表（当前文件中）</code>&gt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">外部样式表（外部文件中）</code></li></ul>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">权值不同时，浏览器是根据权值来判断使用哪种<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>样式的，哪种样式权值高就使用哪种样式</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">层叠优先级是:</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">浏览器缺省</code>&lt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">外部样式表</code>&nbsp;&lt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">内部样式表</code>&nbsp;&lt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">内联样式</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">其中样式表又有:<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">类选择器</code>&nbsp;&lt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">类派生选择器</code>&lt;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ID选择器</code>&nbsp;&lt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ID派生选择器</code></li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">派生选择器以前叫上下文选择器，所以完整的层叠优先级是:</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">浏览器缺省</code>&nbsp;&lt;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">外部样式表</code>&nbsp;&lt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">外部样式表类选择器</code>&nbsp;&lt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">外部样式表类派生选择器</code>&lt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">外部样式表ID选择器</code>&lt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">外部样式表ID派生选择器</code>&lt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">内部样式表</code>&nbsp;&lt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">内部样式表类选择器</code>&nbsp;&lt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">内部样式表类派生选择器</code>&nbsp;&lt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">内部样式表ID选择器</code>&nbsp;&lt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">内部样式表ID派生选择器</code>&nbsp;&lt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">内联样式</code>…共<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">12</code>个优先级</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">另外，如果同一个元素在没有其他样式的作用影响下，其<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">Class</code>定义了多个并以空格分开，其优先级顺序为：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">一个元素同时应用多个<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">class</code>，后定义的优先（即近者优先），加上<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">!important</code>者最优先！</li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第九章-css选择器-上" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第九章-css选择器-上" rel="nofollow" class="headerlink" title="第九章 css选择器(上)" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第九章
+ css选择器(上)</h4>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>选择器：
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">class</code>类选择器可以重复利用</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">id</code>选择器唯一</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">标签选择器
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">什么是选择器：css选择器就是要改变样式的对象</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">选择器<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">{属性:值;属性:值;}</code></p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">标签选择器：页面中所有的标签都是一个选择器&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">p{color:red;}</code></p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ID</code>选择器</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">选择<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">id</code>命名的元素
+ 以&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">#</code>&nbsp;开头&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">#p1{color:#0f0;}</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">类选择器</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">class</code>选择器，选择<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">clas</code>命名的元素
+ 以<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.</code>开头&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.first{color:#00f;}</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>代码写完后上线前要经过压缩处理</li><li style="list-style:none; position:relative; padding-left:14px">本地和服务器分两个<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>版本（备份）</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">压缩后注释都清除，空间体积减少</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">群组选择器</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">选择多个元素,以逗号隔开&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">#main,.first,span,a,h1{color:red;}</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">包含选择器
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">选择某元素的后代元素，也称后代选择器，父类与子类间以空格隔开<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">p</code>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">span{color:red;}</code></li></ul>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">属性选择器</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">选择包含某一属性的元素</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a[title]{color:red;}</code>&nbsp;选择包含<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">title</code>的<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a</code>标签</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a[title][href]{color:red;}</code>&nbsp;选择包含<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">title</code>和<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">href</code>的<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a</code>标签</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&gt;</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">+</code>&nbsp;选择器子类选择器：只选择子元素（只选择儿子）（相当于包含元素）</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">p
+ &gt; span{color:red;}</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">相邻兄弟选择器：只选择后面的相邻兄弟元素
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">p
+ + span{color:red;}</code></li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第十章-css选择器-下" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第十章-css选择器-下" rel="nofollow" class="headerlink" title="第十章 css选择器(下)" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第十章
+ css选择器(下)</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;a&gt;</code>伪类选择器
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a:link
+ {color:#FF0000;}</code>&nbsp;/<span style="">&nbsp;未访问的链接&nbsp;</span>/ （只用于a标签）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a:visited
+ {color:#00FF00;}</code>&nbsp;/<span style="">&nbsp;已访问的链接&nbsp;</span>/ （只用于a标签）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a:hover
+ {color:#FF00FF;}</code>/* 鼠标移动到链接上</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">*/</code>（可和其他标签结合一起用）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a:active
+ {color:#0000FF;}</code>&nbsp;/<span style="">&nbsp;选定的链接&nbsp;</span>/</li><li style="list-style:none; position:relative; padding-left:14px"><span style="color:rgb(0,0,0)">注意</span>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">伪类选择器的排序很重要，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a:link</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a:visited</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a:hover</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a:active</code>，记作<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">lvha</code></li></ul>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">输入伪类选择器（针对表单）</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">input:focus{color:red;}</code>&nbsp;/<span style="">&nbsp;键盘输入焦点&nbsp;</span>/</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">其他伪类选择器</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">p:first-child{color:red;}</code>&nbsp;/<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">*
+ 第一个p *</code>/</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">:before</code>&nbsp;在元素之前添加内容。</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">:after</code>&nbsp;在元素之后添加内容。</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>优先规则</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">内联样式表-&gt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ID</code>&nbsp;选择器—&gt;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">Class</code>&nbsp;类选择器-&gt;标签选择器</li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第十一章-背景属性" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第十一章-背景属性" rel="nofollow" class="headerlink" title="第十一章 背景属性" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第十一章
+ 背景属性</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">背景属性：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">背景的添加 ：</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">背景颜色的添加:</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background:red;</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">backgronnd-color:red;</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">背景图片的添加：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background:url(“images/1.jpg”);</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">backgronnd-image:url(“images/1.jpg”);</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">背景的平铺</li><li style="list-style:none; position:relative; padding-left:14px">什么是平铺？平铺就是图片是否重复出现
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">不平铺：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-repeat:no-repeat;</code></li><li style="list-style:none; position:relative; padding-left:14px">水平方向平铺：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-repeat:repeat-x;</code></li><li style="list-style:none; position:relative; padding-left:14px">垂直方向平铺：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-repeat:repeat-y;</code></li><li style="list-style:none; position:relative; padding-left:14px">完全平铺：默认为完全平铺</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">背景图片的定位
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">背景图片的定位就是可以设置显示背景图片的位置，通过属性<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-position</code>来实现</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-position</code>的取值可为英文单词或者数值和百分值。</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-positon</code>的英文单词取值</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">top
+ left</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">top
+ center</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">top
+ right</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">center
+ left</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">center
+ center</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">center
+ right</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">bottom
+ left</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">bottom
+ center</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ottom
+ right</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-positon</code>的数值取值
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-position:x
+ y;</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">positon</code>的百分值取值
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-position:x%
+ y%;</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">背景图片的大小</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">背景图片的大小可以通过属性<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-size</code>来设置<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-size</code>的取值可为数值和百分值。</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-size</code>的数值取值</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-size:x
+ y;</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-size</code>的数值取值</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-size:x%
+ y%;</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">背景图片的滚动</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">背景图片是否随着内容的滚动而滚动由<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-attachment</code>设置</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-attachment:fixed;</code>&nbsp;固定，不随内容的滚动而滚动</p>
+</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background-attachment:scroll;</code>&nbsp;滚动，随内容的滚动而滚动</li></ul>
+</li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第十二章-文字文本属性" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第十二章-文字文本属性" rel="nofollow" class="headerlink" title="第十二章 文字文本属性" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第十二章
+ 文字文本属性</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>文字文本属性：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">文字属性</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">color:red;</code>&nbsp;文字颜色</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">font-size:12px</code>;
+ 文字大小</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">font-weight:“bold”</code>&nbsp;文字粗细(<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">bold/normal</code>)</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">font-family:“宋体”</code>&nbsp;文字字体</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">font-variant:small-caps</code>小写字母以大写字母显示</li></ul>
+</li></ul>
+</li></ul>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">文本属性</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">text-align:center;</code>&nbsp;文本对齐(<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">right</code>/<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">left</code>/<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">center</code>)</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">line-height:10px;</code>&nbsp;行间距(可通过它实现文本的垂直居中)</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">text-indent:20px;</code>&nbsp;首行缩进</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">text-decoration:none;</code>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">文本线(<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">none</code>/<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">underline</code>/<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">overline</code>/<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">line-through</code>)</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">letter-spacing</code>:
+ 字间距</li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第十三章-盒子模型" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第十三章-盒子模型" rel="nofollow" class="headerlink" title="第十三章 盒子模型" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第十三章
+ 盒子模型</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><span style="color:rgb(0,0,0)">盒子模型</span>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">盒子模型就是一个有高度和宽度的矩形区域</li><li style="list-style:none; position:relative; padding-left:14px">所有<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">html</code>标签都是盒子模型</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">div</code>标签自定义盒子模型</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">所有的标签都是盒子模型</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">class</code>和<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">id</code>的主要差别是：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">class</code>用于元素组（类似的元素，或者可以理解为某一类元素），而<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">id</code>用于标识单独的唯一的元素。</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">盒子模型的组成</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">盒子模型组成部分：
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">自身内容：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">width</code>、h<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">eight</code>&nbsp;宽高</li><li style="list-style:none; position:relative; padding-left:14px">内边距：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding</code></li><li style="list-style:none; position:relative; padding-left:14px">盒子边框：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border</code>&nbsp;边框线</li><li style="list-style:none; position:relative; padding-left:14px">与其他盒子距离：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">margin</code>外边距</li><li style="list-style:none; position:relative; padding-left:14px">内容+内边距+边框+外边距=面积</li></ul>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border</code>&nbsp;边框</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">常见写法&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border:1px
+ solid #f00;</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">单独属性：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border-width</code>:</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border-style:</code>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">dotted</code>&nbsp;点状虚线</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">dashed</code>（虚线）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">solid</code>（实线）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">double</code>（双实线）</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border-color</code>&nbsp;(颜色)</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding</code>&nbsp;内边距</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">值：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">像素</code>/<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">厘米</code>等长度单位、百分比</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding:10px;</code>&nbsp;上下左右</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding:10px
+ 10px;</code>&nbsp;上下 左右</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding:10px
+ 10px 10px;</code>&nbsp;上 左右 下</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding:10px
+ 10px 10px 10px;</code>&nbsp;上 右 下 左（设置4个点–&gt;顺时针方向）</li></ul>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">单独属性：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding-top:</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding-right:</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding-bottom:</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding-left:</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">当设置内边距的时候会把盒子撑大，为了保持盒子原来的大小，应该高度和宽度进行减小，根据<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">width</code>和<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">height</code>减小</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">margin 外边距</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">值：与<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding</code>相同</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">单独属性：与<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding</code>相同</p>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">外边距合并：两个盒子同时设置了外边距，会进行一个外边距合并</p>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<p style="font-size:15px; line-height:2em; margin-bottom:20px; color:rgb(85,85,85)">
+<span style="color:rgb(0,0,0)">补充盒子模型内容</span></p>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">标准盒子模型</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">盒子模型是<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>中一个重要的概念，理解了盒子模型才能更好的排版。其实盒子模型有两种，分别是&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ie</code>盒子模型和标准&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">w3c</code>&nbsp;盒子模型。他们对盒子模型的解释各不相同，先来看看我们熟知的标准盒子模型</li></ul>
+</li></ul>
+<p style="font-size:15px; line-height:2em; margin-bottom:20px; color:rgb(85,85,85); margin-top:25px">
+<img src="http://upload-images.jianshu.io/upload_images/1480597-320bad065d62c499.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" style="border:0px; max-width:100%; height:auto"></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85); margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">从上图可以看到标准&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">w3c</code>&nbsp;盒子模型的范围包括&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">margin</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">content</code>，并且&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">content</code>部分不包含其他部分</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">IE盒子模型</span></p>
+</li></ul>
+<p style="font-size:15px; line-height:2em; margin-bottom:20px; color:rgb(85,85,85); margin-top:25px">
+<img src="http://upload-images.jianshu.io/upload_images/1480597-693242e2f03506f8.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" style="border:0px; max-width:100%; height:auto"></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85); margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">从上图可以看到&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ie</code>盒子模型的范围也包括&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">margin</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">content</code></li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">和标准&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">w3c</code>&nbsp;盒子模型不同的是：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ie</code>&nbsp;盒子模型的&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">content</code>&nbsp;部分包含了&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border</code>和&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding</code></p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">IE</code>盒子模型<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">width</code>&nbsp;=&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding</code>+<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border</code>+<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">内容</code></p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">标准盒子模型 = 内容的宽度（不包含<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border</code>+<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding</code>）</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">例：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">一个盒子的&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">margin</code>为
+ 20px，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border</code>&nbsp;为
+ 1px，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding</code>为
+ 10px，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">content</code>&nbsp;的宽为
+ 200px、高为 50px，假如用标准&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">w3c</code>&nbsp;盒子模型解释，那么这个盒子需要占据的位置为：宽&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">20*2+1*2+10*2+200=262px</code>、高&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">20*2+1*2*10*2+50=112px</code>，盒子的实际大小为：宽&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">1*2+10*2+200=222px</code>、高&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">1*2+10*2+50=72px</code>；假如用ie
+ 盒子模型，那么这个盒子需要占据的位置为：宽&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">20*2+200=240px</code>、高&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">20*2+50=70px</code>，盒子的实际大小为：宽&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">200px</code>、高&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">50px</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">那应该选择哪中盒子模型呢？当然是“标准&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">w3c</code>&nbsp;盒子模型”了。怎么样才算是选择了“标准&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">w3c</code>盒子模型”呢？很简单，就是在网页的顶部加上&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">doctype</code>&nbsp;声明。</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">假如不加<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">doctype</code>&nbsp;声明，那么各个浏览器会根据自己的行为去理解网页，即&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ie</code>浏览器会采用&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ie</code>&nbsp;盒子模型去解释你的盒子，而&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ff</code>会采用标准<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">w3c</code>&nbsp;盒子模型解释你的盒子，所以网页在不同的浏览器中就显示的不一样了。</li><li style="list-style:none; position:relative; padding-left:14px">反之，假如加上了&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">doctype</code>&nbsp;声明，那么所有浏览器都会采用标准&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">w3c</code>盒子模型去解释你的盒子，网页就能在各个浏览器中显示一致了。</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">用&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">jquery</code>&nbsp;做的例子来证实一下</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div><div class="line" style="">6</div><div class="line" style="">7</div><div class="line" style="">8</div><div class="line" style="">9</div><div class="line" style="">10</div><div class="line" style="">11</div><div class="line" style="">12</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:680px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;html&gt;</div><div class="line" style="">&lt;head&gt;</div><div class="line" style="">&lt;title&gt;你用的盒子模型是？&lt;/title&gt;</div><div class="line" style="">&lt;script language="javascript" src="jquery.min.js"&gt;&lt;/script&gt;</div><div class="line" style="">&lt;script language="javascript"&gt;</div><div class="line" style="">var sbox = $.boxmodel ? "标准w3c":"ie";</div><div class="line" style="">document.write("您的页面目前支持："+sbox+"盒子模型");</div><div class="line" style="">&lt;/script&gt;</div><div class="line" style="">&lt;/head&gt;</div><div class="line" style="">&lt;body&gt;</div><div class="line" style="">&lt;/body&gt;</div><div class="line" style="">&lt;/html&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">　上面的代码没有加上&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">doctype</code>&nbsp;声明，在&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ie</code>&nbsp;浏览器中显示&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ie</code>盒子模型，在
+ ff 浏览器中显示“标准<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">w3c</code>盒子模型”。</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div><div class="line" style="">6</div><div class="line" style="">7</div><div class="line" style="">8</div><div class="line" style="">9</div><div class="line" style="">10</div><div class="line" style="">11</div><div class="line" style="">12</div><div class="line" style="">13</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:680px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd"&gt;</div><div class="line" style="">&lt;html&gt;</div><div class="line" style="">&lt;head&gt;</div><div class="line" style="">&lt;title&gt;你用的盒子模型是标准w3c盒子模型&lt;/title&gt;</div><div class="line" style="">&lt;script language="javascript" src="jquery.min.js"&gt;&lt;/script&gt;</div><div class="line" style="">&lt;script language="javascript"&gt;</div><div class="line" style="">var sbox = $.boxmodel ? "标准w3c":"ie";</div><div class="line" style="">document.write("您的页面目前支持："+sbox+"盒子模型");</div><div class="line" style="">&lt;/script&gt;</div><div class="line" style="">&lt;/head&gt;</div><div class="line" style="">&lt;body&gt;</div><div class="line" style="">&lt;/body&gt;</div><div class="line" style="">&lt;/html&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">　代码2 与代码1 唯一的不同的就是顶部加了&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">doctype</code>声明。在所有浏览器中都显示“标准&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">w3c</code>盒子模型”</li></ul>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">所以为了让网页能兼容各个浏览器，让我们用标准&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">w3c</code>&nbsp;盒子模型</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">扩展</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><a target="_blank" href="http://www.jianshu.com/p/e2eb0d8c9de6" rel="nofollow" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)">学会使用box-sizing布局</a></li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第十四章-块元素、行元素与溢出" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第十四章-块元素、行元素与溢出" rel="nofollow" class="headerlink" title="第十四章 块元素、行元素与溢出" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第十四章
+ 块元素、行元素与溢出</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">基本概念
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">块级元素：默认情况下独占一行的元素，可控制宽高、上下边距；</li><li style="list-style:none; position:relative; padding-left:14px">行内元素：默认情况下一行可以摆放多个的元素，不可控制宽高和上下边距</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">行块转换</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">display:none</code>;
+ 不显示</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">display:block</code>;
+ 变成块级元素</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">display:inline</code>;
+ 变成行级元素</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">display:inline-block</code>;
+ 以块级元素样式展示，以行级元素样式排列</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">溢出</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">overflow:hidden</code>;
+ 溢出隐藏</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">overflow:scroll</code>;
+ 内容会被修剪，浏览器会显示滚动条</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">overflow:auto</code>;
+ 如果内容被修剪，则产生滚动条</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">文本不换行：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">white-space:nowrap</code>;</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">长单词换行：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">word-wrap:break-word</code>;</li></ul>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">行内元素和快级元素小结</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">一、<span style="color:rgb(0,0,0)">块级元素</span>：block element</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">每个块级元素默认占一行高度，一行内添加一个块级元素后无法一般无法添加其他元素（<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">float</code>浮动后除外）。两个块级元素连续编辑时，会在页面自动换行显示。块级元素一般可嵌套块级元素或行内元素；</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">块级元素一般作为容器出现，用来组织结构，但并不全是如此。有些块级元素，如只能包含块级元素。</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">DIV</code>&nbsp;是最常用的块级元素，元素样式的<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">display:block</code>都是块级元素。它们总是以一个块的形式表现出来，并且跟同级的兄弟块依次竖直排列，左右撑满。</p>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">二、<span style="color:rgb(0,0,0)">行内元素</span>：inline element</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">也叫内联元素、内嵌元素等；行内元素一般都是基于语义级(semantic)的基本元素，只能容纳文本或其他内联元素，常见内联元素 “a”。比如&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">SPAN</code>元素，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">IFRAME</code>元素和元素样式的<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">display
+ : inline</code>的都是行内元素。例如文字这类元素，各个字母 之间横向排列，到最右端自动折行。</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">三、<span style="color:rgb(0,0,0)">block（块）元素的特点:</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">①、总是在新行上开始；</li><li style="list-style:none; position:relative; padding-left:14px">②、高度，行高以及外边距和内边距都可控制；</li><li style="list-style:none; position:relative; padding-left:14px">③、宽度缺省是它的容器的100%，除非设定一个宽度。</li><li style="list-style:none; position:relative; padding-left:14px">④、它可以容纳内联元素和其他块元素</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">四、<span style="color:rgb(0,0,0)">inline元素的特点</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">①、和其他元素都在一行上；</li><li style="list-style:none; position:relative; padding-left:14px">②、高，行高及外边距和内边距不可改变；</li><li style="list-style:none; position:relative; padding-left:14px">③、宽度就是它的文字或图片的宽度，不可改变</li><li style="list-style:none; position:relative; padding-left:14px">④、内联元素只能容纳文本或者其他内联元素</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">对行内元素，需要注意如下</span>:</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">设置宽度<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">width</code>&nbsp;无效。
+ 设置高度<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">height</code>无效，可以通过<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">line-height</code>来设置。
+ 设置<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">margin</code></li><li style="list-style:none; position:relative; padding-left:14px">只有左右<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">margin</code>有效，上下无效。</li><li style="list-style:none; position:relative; padding-left:14px">设置<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding</code>只有左右<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding</code>有效，上下则无效。注意元素范围是增大了，但是对元素周围的内容是没影响的。</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">五、<span style="color:rgb(0,0,0)">常见的块状元素</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">address</code>&nbsp;–
+ 地址</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">blockquote</code>&nbsp;–
+ 块引用</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">center</code>&nbsp;–
+ 举中对齐块</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">dir</code>&nbsp;–
+ 目录列表</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">div</code>&nbsp;–
+ 常用块级容易，也是<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">CSS
+ layout</code>的主要标签</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">dl</code>&nbsp;–
+ 定义列表</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">fieldset</code>&nbsp;–&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">form</code>控制组</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">form</code>&nbsp;–
+ 交互表单</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">h1</code>&nbsp;–
+ 大标题</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">h2</code>&nbsp;–
+ 副标题</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">h3</code>&nbsp;–
+ 3级标题</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">h4</code>&nbsp;–
+ 4级标题</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">h5</code>&nbsp;–
+ 5级标题</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">h6</code>&nbsp;–
+ 6级标题</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">hr</code>&nbsp;–
+ 水平分隔线</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">isindex</code>&nbsp;–&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">input
+ prompt</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">menu</code>&nbsp;–
+ 菜单列表</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">noframes</code>&nbsp;–&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">frames</code>可选内容，（对于不支持frame的浏览器显示此区块内容</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">noscript</code>&nbsp;–
+ 可选脚本内容（对于不支持<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">script</code>的浏览器显示此内容）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ol</code>&nbsp;–
+ 有序表单</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">p</code>&nbsp;–
+ 段落</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">pre</code>&nbsp;–
+ 格式化文本</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">table</code>&nbsp;–
+ 表格</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ul</code>&nbsp;–
+ 无序列表</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">六、<span style="color:rgb(0,0,0)">常见的内联元素</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a</code>&nbsp;–
+ 锚点</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">abbr</code>&nbsp;–
+ 缩写</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">acronym</code>&nbsp;–
+ 首字</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">b</code>&nbsp;–
+ 粗体(不推荐)</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">bdo</code>&nbsp;–&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">bidi
+ override</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">big</code>&nbsp;–
+ 大字体</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">br</code>&nbsp;–
+ 换行</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">cite</code>&nbsp;–
+ 引用</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">code</code>&nbsp;–
+ 计算机代码(在引用源码的时候需要)</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">dfn</code>&nbsp;–
+ 定义字段</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">em</code>&nbsp;–
+ 强调</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">font</code>&nbsp;–
+ 字体设定(不推荐)</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">i</code>&nbsp;–
+ 斜体</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">img</code>&nbsp;–
+ 图片</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">input</code>&nbsp;–
+ 输入框</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">kbd</code>&nbsp;–
+ 定义键盘文本</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">label</code>&nbsp;–
+ 表格标签</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">q</code>&nbsp;–
+ 短引用</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">s</code>&nbsp;–
+ 中划线(不推荐)</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">samp</code>&nbsp;–
+ 定义范例计算机代码</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">select</code>&nbsp;–
+ 项目选择</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">small</code>&nbsp;–
+ 小字体文本</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">span</code>&nbsp;–
+ 常用内联容器，定义文本内区块</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">strike</code>&nbsp;–
+ 中划线</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">strong</code>&nbsp;–
+ 粗体强调</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">sub</code>&nbsp;–
+ 下标</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">sup</code>&nbsp;–
+ 上标</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">textarea</code>&nbsp;–
+ 多行文本输入框</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">tt</code>&nbsp;–
+ 电传文本</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">u</code>&nbsp;–
+ 下划线</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">七，<span style="color:rgb(0,0,0)">可变元素</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">可变元素为根据上下文语境决定该元素为块元素或者内联元素。</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">applet</code>&nbsp;-&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">java
+ applet</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">button</code>&nbsp;-
+ 按钮</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">del</code>-
+ 删除文本</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">iframe</code>&nbsp;-&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">inline
+ frame</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">ins</code>&nbsp;-
+ 插入的文本</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">map</code>&nbsp;-
+ 图片区块(<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">map</code>)</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">object</code>&nbsp;-&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">object</code>对象</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">script</code>&nbsp;-
+ 客户端脚本</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">八、<span style="color:rgb(0,0,0)">行内元素与块级元素有什么不同</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">区别一：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">块级：块级元素会独占一行，默认情况下宽度自动填满其父元素宽度</li><li style="list-style:none; position:relative; padding-left:14px">行内：行内元素不会独占一行，相邻的行内元素会排在同一行。其宽度随内容的变化而变化。</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">区别二：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">块级：块级元素可以设置宽高</li><li style="list-style:none; position:relative; padding-left:14px">行内：行内元素不可以设置宽高</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">区别三：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">块级：块级元素可以设置<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">margin</code>，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding</code></li><li style="list-style:none; position:relative; padding-left:14px">行内：行内元素水平方向的<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">margin-left;</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">margin-right;</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding-left;</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding-right</code>;可以生效。但是竖直方向的<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">margin-bottom</code>;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">margin-top</code>;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding-top</code>;&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding-bottom</code>;却不能生效。</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">区别四：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">块级：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">display:block</code>;</li><li style="list-style:none; position:relative; padding-left:14px">行内：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">display:inline</code>;</li></ul>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">替换元素有如下：（和<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">img</code>一样的设置方法）</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;img&gt;</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;input&gt;</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;textarea&gt;</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;select&gt;</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;object&gt;</code>都是替换元素，这些元素都没有实际的内容</li></ul>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">可以通过修改<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">display</code>属性来切换块级元素和行内元素</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第十五章-定位" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第十五章-定位" rel="nofollow" class="headerlink" title="第十五章 定位" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第十五章
+ 定位</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">static</code>静态定位（不对它的位置进行改变，在哪里就在那里）</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">默认值。没有定位，元素出现在正常的流中（忽略&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">top</code>,<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">bottom,</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">left,
+ right</code>&nbsp;或者&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">z-index</code>&nbsp;声明）。</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">fixed</code>固定定位（参照物–浏览器窗口）—做
+ 弹窗广告用到</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">生成固定定位的元素，相对于浏览器窗口进行定位。 元素的位置通过&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">"left"</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">"top"</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">"right"</code>以及&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">"bottom"</code>属性进行规定。</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">relative</code>（相对定位
+ ）（参照物以他本身）</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">生成相对定位的元素，相对于其正常位置进行定位。</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">absolute</code>（绝对定位）(除了<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">static</code>都可以，找到参照物–&gt;与它最近的已经有定位的父元素进行定位)</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">生成绝对定位的元素，相对于&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">static</code>&nbsp;定位以外的第一个父元素进行定位。</li><li style="list-style:none; position:relative; padding-left:14px">元素的位置通过 “<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">left"</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">"top"</code>,&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">"right"</code>&nbsp;以及&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">"bottom"</code>&nbsp;属性进行规定</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">z-index</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">z-index</code>&nbsp;属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。</li><li style="list-style:none; position:relative; padding-left:14px">定位的基本思想: 它允许你定义元素框相对于其正常位置应该出现的位置，或者相对于父元素、另一个元素甚至浏览器窗口本身的位置。</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">一切皆为框</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">块级元素:&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">div</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">h1</code>或<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">p</code>元素
+ 即：显示为一块内容称之为 “块框“ ;</li><li style="list-style:none; position:relative; padding-left:14px">行内元素:&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">span</code>,<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">strong</code>,<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a</code>等元素
+ 即：内容显示在行中称 “行内框”;</li><li style="list-style:none; position:relative; padding-left:14px">使用display属性改变成框的类型 即：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">display:block</code>;
+ 让行内元素设置为块级元素，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">display:none;</code>&nbsp;没有框</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">相对定位：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">如果对一个元素进行相对定位，它将出现在它所在的位置上。</li><li style="list-style:none; position:relative; padding-left:14px">通过设置垂直或水平位置，让这个元素“相对于”它的起点进行移动</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.adv_relative
+ { position: relative; left: 30px; top: 20px; }</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">绝对定位：</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">元素的位置相对于最近的已定位祖先元素，如果元素没有已定位 的祖先元素，它的位置相对于最初的包含块。&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.adv_absolute
+ { position: absolute; left: 30px; top: 20px; }</code></li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<p style="font-size:15px; line-height:2em; margin-bottom:20px; color:rgb(85,85,85)">
+<img src="http://upload-images.jianshu.io/upload_images/1480597-f72c1c8486445df1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" style="border:0px; max-width:100%; height:auto"><br style="">
+<img src="http://upload-images.jianshu.io/upload_images/1480597-7ab9cda0bbd7e62f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" style="border:0px; max-width:100%; height:auto"></p>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第十六章-框架" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第十六章-框架" rel="nofollow" class="headerlink" title="第十六章 框架" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第十六章
+ 框架</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">frameset</code>框架：
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;frameset&gt;</code>&nbsp;—-
+ 用来定义一个框架；双标签<br style="">
+不能和&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;body&gt;</code>&nbsp;一起使用</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">rows</code>、<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">cols</code>属性</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">rows</code>&nbsp;定义行表示框架有多少行（取值&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">px</code>/<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">%</code>/&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">*</code>&nbsp;）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">cols</code>&nbsp;定义列表示框架有多少列（取值<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">px</code>/&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">%</code>/&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">*</code>&nbsp;）</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">frame子框架</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">&lt;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">frame</code>&gt;
+ —- 表示框架中的某一个部分；单标签，要跟结束标志</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">src</code>&nbsp;显示的网页的路径</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">name</code>&nbsp;框架名</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">frameborder</code>&nbsp;边框线（取值
+ 0 / 1）</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">&lt;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">noframes</code>&gt;属性</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">&lt;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">noframes</code>&gt;
+ 提供不支持框架的浏览器显示<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">body</code>的内容；双标签</p>
+</li></ul>
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div><div class="line" style="">6</div><div class="line" style="">7</div><div class="line" style="">8</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:689px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">&lt;frameset&gt;</div><div class="line" style="">     &lt;frame  src=“”  /&gt;</div><div class="line" style="">     &lt;frame  src=“” /&gt;</div><div class="line" style="">     &lt;frame  src=“” /&gt;</div><div class="line" style="">     &lt;noframes&gt;</div><div class="line" style="">      &lt;body&gt;内容&lt;/body&gt;</div><div class="line" style="">     &lt;/noframes&gt;</div><div class="line" style="">&lt;/frameset&gt;</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;iframe&gt;</code>内联框架
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">iframe</code>元素会创建包含另外一个文档的内联框架（即行内框架）</li><li style="list-style:none; position:relative; padding-left:14px">允许和&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">body</code>&nbsp;一起使用</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">width</code>&nbsp;宽（取值
+ px / %）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">height</code>&nbsp;高（取值
+ px / %）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">name</code>&nbsp;框架名</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">frameborder</code>&nbsp;边框线（取值
+ 0 / 1）</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">src</code>&nbsp;显示的网页的路径</li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="第十七章-css高级属性" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第十七章-css高级属性" rel="nofollow" class="headerlink" title="第十七章 css高级属性" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第十七章
+ css高级属性</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">opacity</code>透明属性
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">opacity</code>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">对于<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">IE6/7/</code>，使用<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">filter:alpha(opacity:值;</code>)
+ 值为<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">0-100</code></li><li style="list-style:none; position:relative; padding-left:14px">对于<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">Webkit</code>，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">Opera</code>，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">Firefox</code>，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">IE9+</code>，使用<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">opacity</code>:值;
+ 值为<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">0-1</code></li><li style="list-style:none; position:relative; padding-left:14px">对于早期火狐，使用<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">-moz-opacity</code>:值;
+ 值为<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">0-1</code></li><li style="list-style:none; position:relative; padding-left:14px">所以写透明属性时，一般写法是</li></ul>
+</li></ul>
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:689px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style=""> {	</div><div class="line" style="">    opacity:0.5;</div><div class="line" style="">   filter:alpha(opacity：50);/*0-100*/</div><div class="line" style="">   -moz-opacity:0.5;	/*取值0-1*/--&gt;针对早起版本的火狐兼容问题的解决</div><div class="line" style="">}</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border-radius</code>圆角边框属性</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">向&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">div</code>&nbsp;元素添加圆角边框
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border-radius:10px</code>;</li></ul>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">box-shadow</code>阴影属性</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">box-shadow</code>属性向框添加阴影效果,后面跟4个参数。</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">box-shadow:0px
+ 0px 10px #000;</code></p>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;embed&gt;</code>属性</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">是<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">HTML5</code>中新增的标签,媒体嵌入插件标签，可以通过<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;embed&gt;</code>插入音频或视频</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;embed
+ src=“media/music.mp3” /&gt;</code></p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">格式<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.mid</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.wav</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.mp3</code>等</p>
+</li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><span style="color:rgb(0,0,0)">CSS部分导图总结</span></li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<p style="font-size:15px; line-height:2em; margin-bottom:20px; color:rgb(85,85,85)">
+<img src="http://upload-images.jianshu.io/upload_images/1480597-4b55b5085a7d0c56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" style="border:0px; max-width:100%; height:auto"></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><br>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<p style="font-size:15px; line-height:2em; margin-bottom:20px; color:rgb(85,85,85)">
+<img src="http://upload-images.jianshu.io/upload_images/1480597-a893d4023c39c78a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" style="border:0px; max-width:100%; height:auto"></p>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">css</code>常见简写</li></ul>
+<p style="font-size:15px; line-height:2em; margin-bottom:20px; color:rgb(85,85,85); margin-top:25px">
+<img src="http://upload-images.jianshu.io/upload_images/1480597-cbce5ef927ab2589.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css简写速查" style="border:0px; max-width:100%; height:auto"></p>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h3 id="第三部分-附录" style="font-weight:normal; margin:28px 0px 15px; font-size:16px"><a name="t2"></a>
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#第三部分-附录" rel="nofollow" class="headerlink" title="第三部分 附录" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>第三部分
+ 附录</h3>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="附录一-DIV命名规范" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#附录一-DIV命名规范" rel="nofollow" class="headerlink" title="附录一 DIV命名规范" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>附录一
+ DIV命名规范</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">企业<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">DIV</code>使用频率高的命名方法</p>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">网页内容类</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">标题:&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">title</code></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">摘要:&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">summary</code></li><li style="list-style:none; position:relative; padding-left:14px">箭头：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">arrow</code></li><li style="list-style:none; position:relative; padding-left:14px">商标：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">label</code></li><li style="list-style:none; position:relative; padding-left:14px">网站标志：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">logo</code></li><li style="list-style:none; position:relative; padding-left:14px">转角/圆角：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">corner</code></li><li style="list-style:none; position:relative; padding-left:14px">横幅广告：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">banner</code></li><li style="list-style:none; position:relative; padding-left:14px">子菜单：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">subMenu</code></li><li style="list-style:none; position:relative; padding-left:14px">搜索：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">search</code></li><li style="list-style:none; position:relative; padding-left:14px">搜索框：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">searchBox</code></li><li style="list-style:none; position:relative; padding-left:14px">登录：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">login</code></li><li style="list-style:none; position:relative; padding-left:14px">登录条：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">loginbar</code></li><li style="list-style:none; position:relative; padding-left:14px">工具条：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">toolbar</code></li><li style="list-style:none; position:relative; padding-left:14px">下拉：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">drop</code></li><li style="list-style:none; position:relative; padding-left:14px">标签页：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">tab</code></li><li style="list-style:none; position:relative; padding-left:14px">当前的：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">current</code></li><li style="list-style:none; position:relative; padding-left:14px">列表：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">list</code></li><li style="list-style:none; position:relative; padding-left:14px">滚动：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">scroll</code></li><li style="list-style:none; position:relative; padding-left:14px">服务：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">service</code></li><li style="list-style:none; position:relative; padding-left:14px">提示信息：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">msg</code></li><li style="list-style:none; position:relative; padding-left:14px">热点：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">hot</code></li><li style="list-style:none; position:relative; padding-left:14px">新闻：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">news</code></li><li style="list-style:none; position:relative; padding-left:14px">小技巧：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">tips</code></li><li style="list-style:none; position:relative; padding-left:14px">下载：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">download</code></li><li style="list-style:none; position:relative; padding-left:14px">栏目标题：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">title</code></li><li style="list-style:none; position:relative; padding-left:14px">热点：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">hot</code></li><li style="list-style:none; position:relative; padding-left:14px">加入：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">joinus</code></li><li style="list-style:none; position:relative; padding-left:14px">注册：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">regsiter</code></li><li style="list-style:none; position:relative; padding-left:14px">指南：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">guide</code></li><li style="list-style:none; position:relative; padding-left:14px">友情链接：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">friendlink</code></li><li style="list-style:none; position:relative; padding-left:14px">状态：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">status</code></li><li style="list-style:none; position:relative; padding-left:14px">版权：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">copyright</code></li><li style="list-style:none; position:relative; padding-left:14px">按钮：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">btn</code></li><li style="list-style:none; position:relative; padding-left:14px">合作伙伴：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">partner</code></li><li style="list-style:none; position:relative; padding-left:14px">投票：&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">vote</code></li><li style="list-style:none; position:relative; padding-left:14px">左右中：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">left</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">right</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">center</code></li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+</li><li style="list-style:none; position:relative; padding-left:14px">注释的写法:&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">/*
+ Footer */</code>&nbsp;内容区<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">/*
+ End Footer */</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">id的命名:</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">页面结构</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">容器:&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">container</code></li><li style="list-style:none; position:relative; padding-left:14px">页头：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">header</code></li><li style="list-style:none; position:relative; padding-left:14px">内容：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">content</code>/<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">container</code></li><li style="list-style:none; position:relative; padding-left:14px">页面主体：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">main</code></li><li style="list-style:none; position:relative; padding-left:14px">页尾：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">footer</code></li><li style="list-style:none; position:relative; padding-left:14px">导航：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">nav</code></li><li style="list-style:none; position:relative; padding-left:14px">侧栏：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">sidebar</code></li><li style="list-style:none; position:relative; padding-left:14px">栏目：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">column</code></li><li style="list-style:none; position:relative; padding-left:14px">页面外围控制整体布局宽度：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">wrapper</code></li><li style="list-style:none; position:relative; padding-left:14px">左右中：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">left</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">right</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">center</code></li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">导航</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">导航：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">nav</code></li><li style="list-style:none; position:relative; padding-left:14px">主导航：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">mainbav</code></li><li style="list-style:none; position:relative; padding-left:14px">子导航：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">subnav</code></li><li style="list-style:none; position:relative; padding-left:14px">顶导航：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">topnav</code></li><li style="list-style:none; position:relative; padding-left:14px">边导航：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">sidebar</code></li><li style="list-style:none; position:relative; padding-left:14px">左导航：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">leftsidebar</code></li><li style="list-style:none; position:relative; padding-left:14px">右导航：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">rightsidebar</code></li><li style="list-style:none; position:relative; padding-left:14px">菜单：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">menu</code></li><li style="list-style:none; position:relative; padding-left:14px">子菜单：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">submenu</code></li><li style="list-style:none; position:relative; padding-left:14px">标题:&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">title</code></li><li style="list-style:none; position:relative; padding-left:14px">摘要:&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">summary</code></li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">功能</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">标志：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">logo</code></li><li style="list-style:none; position:relative; padding-left:14px">广告：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">banner</code></li><li style="list-style:none; position:relative; padding-left:14px">登陆：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">login</code></li><li style="list-style:none; position:relative; padding-left:14px">登录条：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">loginbar</code></li><li style="list-style:none; position:relative; padding-left:14px">注册：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">regsiter</code></li><li style="list-style:none; position:relative; padding-left:14px">搜索：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">search</code></li><li style="list-style:none; position:relative; padding-left:14px">功能区：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">shop</code></li><li style="list-style:none; position:relative; padding-left:14px">标题：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">title</code></li><li style="list-style:none; position:relative; padding-left:14px">加入：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">joinus</code></li><li style="list-style:none; position:relative; padding-left:14px">状态：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">status</code></li><li style="list-style:none; position:relative; padding-left:14px">按钮：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">btn</code></li><li style="list-style:none; position:relative; padding-left:14px">滚动：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">scroll</code></li><li style="list-style:none; position:relative; padding-left:14px">标签页：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">tab</code></li><li style="list-style:none; position:relative; padding-left:14px">文章列表：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">list</code></li><li style="list-style:none; position:relative; padding-left:14px">提示信息：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">msg</code></li><li style="list-style:none; position:relative; padding-left:14px">当前的:<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">current</code></li><li style="list-style:none; position:relative; padding-left:14px">小技巧：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">tips</code></li><li style="list-style:none; position:relative; padding-left:14px">图标:&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">icon</code></li><li style="list-style:none; position:relative; padding-left:14px">注释：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">note</code></li><li style="list-style:none; position:relative; padding-left:14px">指南：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">guild</code></li><li style="list-style:none; position:relative; padding-left:14px">服务：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">service</code></li><li style="list-style:none; position:relative; padding-left:14px">热点：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">hot</code></li><li style="list-style:none; position:relative; padding-left:14px">新闻：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">news</code></li><li style="list-style:none; position:relative; padding-left:14px">下载：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">download</code></li><li style="list-style:none; position:relative; padding-left:14px">投票：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">vote</code></li><li style="list-style:none; position:relative; padding-left:14px">合作伙伴：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">partner</code></li><li style="list-style:none; position:relative; padding-left:14px">友情链接：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">link</code></li><li style="list-style:none; position:relative; padding-left:14px">版权：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">copyright</code></li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">class</code>的命名:</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">颜色:使用颜色的名称或者16进制代码,如</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.red
+ { color: red; }</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.f60
+ { color: #f60; }</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.ff8600
+ { color: #ff8600; }</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">字体大小,直接使用”font+字体大小”作为名称,如</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.font12px
+ { font-size: 12px; }</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.font9px
+ {font-size: 9pt; }</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">对齐样式,使用对齐目标的英文名称,如</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.left
+ { float:left; }</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.bottom
+ { float:bottom; }</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">标题栏样式,使用”类别+功能”的方式命名,如</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.barnews
+ { }</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">.barproduct
+ { }</code></li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">注意事项::</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">一律小写;</li><li style="list-style:none; position:relative; padding-left:14px">尽量用英文;</li><li style="list-style:none; position:relative; padding-left:14px">不加中杠和下划线;</li><li style="list-style:none; position:relative; padding-left:14px">尽量不缩写，除非一看就明白的单词.</li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px"><span style="color:rgb(0,0,0)">推荐的&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">CSS</code>&nbsp;书写顺序：</span></p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">显示属性</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">display</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">list-style</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">position</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">float</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">clear</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">自身属性</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">width</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">height</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">margin</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">padding</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">border</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background</code></li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px">
+<p style="line-height:2em; margin-bottom:20px">文本属性</p>
+<ul style="line-height:1.8em; padding:0px; list-style:none; margin-top:-10px">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">color</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">font</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">text-decoration</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">text-align</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">vertical-align</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">white-space</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">other
+ text</code></li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">content</code></li></ul>
+</li></ul>
+</li></ul>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<h4 id="附录二-CSS精灵" style="font-weight:normal; margin:28px 0px 15px; font-size:14px">
+<a target="_blank" href="http://blog.poetries.top/2016/09/06/DIV+CSS%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9E%E9%A1%BE/#附录二-CSS精灵" rel="nofollow" class="headerlink" title="附录二 CSS精灵" style="background-color:transparent; text-decoration:none; color:rgb(26,188,156)"></a>附录二
+ CSS精灵</h4>
+<hr style="height:1px; max-width:400px; margin-top:-1px; border:none">
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px"><span style="color:rgb(0,0,0)">CSS精灵原理以及应用</span>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">CSS</code>雪碧的基本原理是把你的网站上用到的一些图片整合到一张单独的图片中，从而减少你的网站的HTTP请求数量。
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">该图片使用<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">CSS</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background和background-position</code>属性渲染，这也就意味着你的标签变得更加复杂了，图片是在<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">CSS</code>中定义，而非<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;img&gt;</code>标签。</li></ul>
+</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px"><span style="color:rgb(0,0,0)">一个简单的例子</span>：
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">一张图片作出一个按钮的三个状态</li><li style="list-style:none; position:relative; padding-left:14px">一个链接用<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">CSS</code>做成按钮的样式，我们可以使用同一张图片，完成按钮的三个状态，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a:link</code>，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a:hover</code>，<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">a:active</code>&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">&lt;a
+ class="button" href="#"&gt;链接&lt;/a&gt;</code></li><li style="list-style:none; position:relative; padding-left:14px">加入右侧的图片为：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">200px
+ 65px</code>的三个按钮图拼合而成的图片<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">button.png</code>，从上到下一次为按钮的普通、鼠标滑过、鼠标点击的状态。则可以使用<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">CSS</code>进行定义。</li></ul>
+</li></ul>
+<table style="border-collapse:collapse; border-spacing:0px; width:728px; max-width:100%; border:0px; margin:0px">
+<tbody style="">
+<tr style="">
+<td class="gutter" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent; padding-right:30px; text-align:right; border:0px"><div class="line" style="">1</div><div class="line" style="">2</div><div class="line" style="">3</div><div class="line" style="">4</div><div class="line" style="">5</div><div class="line" style="">6</div><div class="line" style="">7</div><div class="line" style="">8</div><div class="line" style="">9</div><div class="line" style="">10</div><div class="line" style="">11</div><div class="line" style="">12</div><div class="line" style="">13</div><div class="line" style="">14</div><div class="line" style="">15</div><div class="line" style="">16</div><div class="line" style="">17</div><div class="line" style="">18</div><div class="line" style="">19</div></pre>
+</td>
+<td class="code" style="padding:0px; line-height:1.5; vertical-align:top; color:rgb(85,85,85); border:0px; font-size:14px; width:680px">
+<pre style="overflow-x:auto; overflow-y:hidden; font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; line-height:1.5em; white-space:pre-wrap; word-wrap:break-word; margin-top:0px; margin-bottom:0px; background-color:transparent"><div class="line" style="">a {</div><div class="line" style="">    display:block; </div><div class="line" style="">    width:200px; </div><div class="line" style="">    height:65px; </div><div class="line" style="">    line-height:65px; /*定义状态*/</div><div class="line" style="">    text-indent:-2015px; /*隐藏文字*/</div><div class="line" style="">    background-image:url(button.png); /*定义背景图片*/</div><div class="line" style="">    background-position:0 0;</div><div class="line" style="">    /*定义链接的普通状态，此时图像显示的是顶上的部分*/</div><div class="line" style="">}</div><div class="line" style=""></div><div class="line" style="">a:hover {</div><div class="line" style="">    background-position:0 -66px;</div><div class="line" style="">    /*定义链接的滑过状态，此时显示的为中间部分，向下取负值*/</div><div class="line" style="">}</div><div class="line" style="">a:active {</div><div class="line" style="">    background-position:0 -132px;                      </div><div class="line" style="">    /*定 义链接的普通状态，此时显示的是底部的部分，向下取负值*/</div><div class="line" style="">}</div></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<ul style="line-height:1.8em; padding:0px; list-style:none; font-size:15px; color:rgb(85,85,85)">
+<li style="list-style:none; position:relative; padding-left:14px">更多的<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">CSS</code>雪碧，图片更复杂，背景定位更精确。可能会用到大量的数值
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">如：<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">background:url(nav.png)
+ -180px 24pxno-repeat</code>; 来达到更精确的定位</li></ul>
+</li><li style="list-style:none; position:relative; padding-left:14px"><span style="color:rgb(0,0,0)">优点：</span>
+<ul style="line-height:1.8em; padding:0px; list-style:none">
+<li style="list-style:none; position:relative; padding-left:14px">减少加载网页图片时对服务器的请求次数</li><li style="list-style:none; position:relative; padding-left:14px">可以合并多数背景图片和小图标，方便在任何位置使用，这样不同位置的请求只需要调用一个图片，从而减少对服务器的请求次数，降低服务器压力，同时提高了页面的加载速度，节约服务器的流量。</li><li style="list-style:none; position:relative; padding-left:14px">提高页面的加载速度</li><li style="list-style:none; position:relative; padding-left:14px"><code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">sprite</code>技术的其中一个好处是图片的加载时间(在有许多&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">sprite</code>&nbsp;时，单张图片的加载时间)。由所需图片拼成的一张&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">GIF</code>图片的尺寸会明显小于所有图片拼合前的大小。单张的&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">GIF</code>只有相关的一个色表，而单独分割的每一张&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&quot;Microsoft YaHei&quot;,&quot;Source Han Sans CN&quot;,&quot;WenQuanYi Micro Hei&quot;,Arial,sans-serif; font-size:1em; padding:3px 6px; vertical-align:middle; background-color:rgb(247,247,247); color:rgb(233,105,0)">GIF</code>&nbsp;都有自己的一个色表，这就增加了总体的大小。因此，单独的一张&nbsp;<code style="font-family:PingFangSC-Regular,Roboto,Verdana,&quot;Open Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,&quot;Hiragino Sans GB&quot;,&
