@@ -32,7 +32,7 @@ API（Application Programming Interface,应用程序编程接口）是一些预�
 
 ### JavaScript的组成
 
-![1496912475691](../media/1496912475691.png)
+![1496912475691](AA../public/media/1496912475691.png)
 
 #### ECMAScript - JavaScript的核心 
 
@@ -213,7 +213,7 @@ console.log(getQuery(location.href));
 
 DOM又称为文档树模型
 
-![1497154623955](../media/1497154623955.png)
+![1497154623955](../public/media/1497154623955.png)
 
 - 文档：一个网页可以称为文档
 - 节点：网页中的所有内容都是节点（标签、属性、文本、注释等）
@@ -222,7 +222,7 @@ DOM又称为文档树模型
 
 ### 模拟文档树结构
 
-![1497165666684](../media/1497165666684.png)
+![1497165666684](../public/media/1497165666684.png)
 
 ```javascript
 function Element(option) {
@@ -692,7 +692,7 @@ console.log(box.offsetWidth);
 console.log(box.offsetHeight);
 ```
 
-![1498743216279](../media/1498743216279.png)
+![1498743216279](../public/media/1498743216279.png)
 
 ### 客户区大小
 
@@ -704,7 +704,7 @@ console.log(box.clientWidth);
 console.log(box.clientHeight);
 ```
 
-![1498743269100](../media/1498743269100.png)
+![1498743269100](../public/media/1498743269100.png)
 
 ### 滚动偏移
 
@@ -716,7 +716,7 @@ console.log(box.scrollWidth)
 console.log(box.scrollHeight)
 ```
 
-![1498743288621](../media/1498743288621.png)
+![1498743288621](../public/media/1498743288621.png)
 
 ### 案例 
 
@@ -733,4 +733,4 @@ console.log(box.scrollHeight)
 
 ### 元素的类型
 
-![1497169919418](../media/1497169919418.png)
+![1497169919418](../public/media/1497169919418.png)
