@@ -113,18 +113,18 @@
 > 3.修改host文件，将配置文件中申明的两个域名做一下绑定（解析）
   - host 文件位置：C:\Windows\System32\drivers\etc\hosts
    ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot008.png?raw=true)
-  - 快速找到位置
+  - ####快速找到位置
      - 1.运行 drives
      - 2.运行 to hosts
-  - 添加域名绑定解析
+  - ####添加域名绑定解析
     ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot009.png?raw=true)
-  - 看是否绑定成功 在cmd中使用ping命令
+  - ####看是否绑定成功 在cmd中使用ping命令
     ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot010.png?raw=true)
-  - 在浏览器中查看（下图表示成功）
+  - ####在浏览器中查看（下图表示成功）
     ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot011.png?raw=true)
-  - 将代码文件复制到站点目录中
+  - ####将代码文件复制到站点目录中
       -（如：将thinkPHP里面的文件复制进去）*为了一步步学习thinkPHP特性，我们只复制两个文件，如下图*
       ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot012.png?raw=true)
-  - 再次通过浏览器查看
+  - ####再次通过浏览器查看
     ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot013.png?raw=true)
       
