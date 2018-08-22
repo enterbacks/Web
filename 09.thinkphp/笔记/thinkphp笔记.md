@@ -223,10 +223,53 @@
     http://www.xingheng.com/index.php?m=Home&c=User&a=test&id=1
     ```
     - 缺点：在URL暴露参数,不安全
+------------- 
 - Pathinfo形式路由
+    - PATHINFO模式是系统的默认URL模式，提供了最好的SEO支持，系统内部已经做了环境的兼容处理，所以能够支持大多数的主机环境。对应前面的URL模式，PATHINFO模式下面的URL访问地址是：         
     ```aidl
-
+        http://网址/入口文件/分组名/控制器/方法/参数名/参数值/
+        例如访问上述控制器的方法，并且传递一个参数 id = 1：
+        http://www.xingheng.com/index.php/Home/User/test/id/1/
 ` ``        
-- Rewrite形式路由
-- 兼容形式路由
+   ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot023.png?raw=true)
+------------- 
+- *Rewrite形式路由(默认)*
+    -  REWRITE模式是在PATHINFO模式的基础上添加了重写规则的支持，可以去掉URL地址里面的入口文件index.php
+    -  不能直接使用，需要额外配置WEB服务器的重写规则。
+    
+     1.打开重写
+      ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot024.png?raw=true)
 
+        - 如果是Apache则需要在入口文件的同级添加.htaccess文件
+        ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot026.png?raw=true)
+
+        - 内容如下：
+    ```aidl
+              <IfModule mod_rewrite.c>
+              RewriteEngine on
+              RewriteCond %{REQUEST_FILENAME} !-d
+              RewriteCond %{REQUEST_FILENAME} !-f
+              RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+              </IfModule>
+            接下来就可以使用下面的URL地址访问了。
+              http://www.xingheng.com/Home/User/test/id/1/
+```
+     ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot025.png?raw=true)
+     - 这种路由形式需要Apache的支持，而服务器类型很多，所以不推荐使用
+      
+------------- 
+
+- 兼容形式路由
+  -  兼容模式是用于不支持PATHINFO的特殊环境，URL地址是： 
+        http://网址/入口文件?s=/分组名/控制器名/方法名/参数名/参数值
+      ```
+        http://www.xingheng.com/index.php?s=/Home/User/test/id/60
+           
+      ```
+      ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot027.png?raw=true)
+      
+
+    - *只有一个参数s*
+    - 兼容模式配合Web服务器重写规则的定义，可以达到和REWRITE模式一样的URL效果。
+     
+#### 路由形式的配置
