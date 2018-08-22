@@ -176,7 +176,7 @@
          UserController.class.php
          ```
          
-         ```php
+          ```ruby
           <?php
           #声明命名控件
           namespace Home\Controller;
@@ -188,3 +188,5 @@
               }
           } ?> 
          ```
+         
+        
