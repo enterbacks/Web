@@ -147,7 +147,7 @@
     ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot016.png?raw=true)
    
 -------------    
-##细节问题
+## 细节问题
   - ### 自动生成
     - 在首次运行index.php入口文件时会自动生成相应的目录。目录的名字取决于在index.php定义的常量APP_PATH
      ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot019.png?raw=true)
@@ -157,7 +157,7 @@
     - 在自动生成的目录下都会有一个空白的html文件，文件名叫做index.html.这就叫做目录安全文件 
     - 作用：
          - 隐藏目录结构，保证安全
-         ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot018.png?raw=true)
+         ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot017.png?raw=true)
   
      -------------   
   - ### 默认访问
@@ -175,7 +175,8 @@
          ```
          UserController.class.php
          ```
-         
+         ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot021.png?raw=true)
+               
           ```ruby
           <?php
           #声明命名控件
@@ -184,9 +185,48 @@
           use Think\Controller;
           #声明控制器（类）并且继承父类
           class UserController extends Controller {
-              public function index(){    
+              public function test(){    
               }
           } ?> 
          ```
          
+      - 命名空间声明和使用必须和目录挂钩
+      
+      - 完善 测试```UserController.class.php```
         
+         ```ruby
+                  <?php
+                  #声明命名控件
+                  namespace Home\Controller;
+                  #引入父类控制器
+                  use Think\Controller;
+                  #声明控制器（类）并且继承父类
+                  class UserController extends Controller {
+                      public function test(){
+                         echo "测试UserController.class.php成功";
+                      }
+                  }
+           ```
+           ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot022.png?raw=true)
+-------------              
+      - 根据需要，后期可添加控制器     
+
+
+-------------    
+## *路由形式（重点）*
+### *路由：*是指访问项中具体某个方法的URL地址
+#### 四种路由形式
+- 普通形式路由(get形式路由)      (get-2k;  post-8M)
+    ```
+    http://网址/入口文件?m=分组名&c=控制器名&a=方法名&参数名=参数值
+    例如访问上述控制器的方法，并且传递一个参数 id = 1：
+    http://www.xingheng.com/index.php?m=Home&c=User&a=test&id=1
+    ```
+    - 缺点：在URL暴露参数,不安全
+- Pathinfo形式路由
+    ```aidl
+
+` ``        
+- Rewrite形式路由
+- 兼容形式路由
+
