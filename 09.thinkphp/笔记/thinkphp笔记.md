@@ -97,7 +97,7 @@
   - > 分组>应用>系统
   
 #### thinkphp_3.2.3_full\ThinkPHP\Library\Think目录下
-![目录结构](https://git hub.com/HunterXing/resourse/blob/master/images/screenshot/screenshot006.png?raw=true)
+![目录结构](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot006.png?raw=true)
 
 
 ## *部署*（重点）
