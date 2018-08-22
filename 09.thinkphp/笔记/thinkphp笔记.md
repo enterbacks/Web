@@ -237,11 +237,11 @@
     -  REWRITE模式是在PATHINFO模式的基础上添加了重写规则的支持，可以去掉URL地址里面的入口文件index.php
     -  不能直接使用，需要额外配置WEB服务器的重写规则。
     
-     1.打开重写
+     1.打开重写（再此文件apache\conf\httpd.conf）
       ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot024.png?raw=true)
 
         - 如果是Apache则需要在入口文件的同级添加.htaccess文件
-        ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot026.png?raw=true)
+     ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot026.png?raw=true)
 
         - 内容如下：
     ```aidl
