@@ -111,20 +111,80 @@
    ![目录结构](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screen008.png?raw=true)
 > 2.重启Apache
 > 3.修改host文件，将配置文件中申明的两个域名做一下绑定（解析）
-  - host 文件位置：C:\Windows\System32\drivers\etc\hosts
+  - #### host文件位置：C:\Windows\System32\drivers\etc\hosts
    ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot008.png?raw=true)
-  - ####快速找到位置
+    -------------
+  - #### 快速找到位置
      - 1.运行 drives
      - 2.运行 to hosts
-  - ####添加域名绑定解析
+    -------------
+  - #### 添加域名绑定解析
     ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot009.png?raw=true)
-  - ####看是否绑定成功 在cmd中使用ping命令
+  -------------
+  - #### 看是否绑定成功 在cmd中使用ping命令
     ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot010.png?raw=true)
-  - ####在浏览器中查看（下图表示成功）
+  -------------
+  - #### 在浏览器中查看（下图表示成功）
     ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot011.png?raw=true)
-  - ####将代码文件复制到站点目录中
+   -------------
+  - #### 将代码文件复制到站点目录中
       -（如：将thinkPHP里面的文件复制进去）*为了一步步学习thinkPHP特性，我们只复制两个文件，如下图*
       ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot012.png?raw=true)
-  - ####再次通过浏览器查看
+  --------------
+  - #### 再次通过浏览器查看
     ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot013.png?raw=true)
+  
+  -------------
+  - ### 打开站点目录,会发现多了一个Application目录。（刚刚并没有复制进去）   
+    ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot014.png?raw=true)
+    
+  -------------  
+  - #### 生成的Application和thinkphp解压包解压出来的Application不一样
+    ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot015.png?raw=true)
+     
+  -------------     
+  - ### Common目录下
+    ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot016.png?raw=true)
+   
+-------------    
+##细节问题
+  - ### 自动生成
+    - 在首次运行index.php入口文件时会自动生成相应的目录。目录的名字取决于在index.php定义的常量APP_PATH
+     ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot019.png?raw=true)
+     - 如果改变的话，就会生成相应的目录。
+     -------------   
+  - ### 目录安全文件  
+    - 在自动生成的目录下都会有一个空白的html文件，文件名叫做index.html.这就叫做目录安全文件 
+    - 作用：
+         - 隐藏目录结构，保证安全
+         ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot018.png?raw=true)
+  
+     -------------   
+  - ### 默认访问
+    - 默认分组/平台：Home
+    - 默认控制器：index
+    - 默认方法：index()
+     可以在系统配置文件中找到：WWW\thinkPHP-learning\ThinkPHP\Conf      
+      ![](https://github.com/HunterXing/resourse/blob/master/images/screenshot/screenshot020.png?raw=true)
       
+       -------------   
+## thinkPHP中控制器 
+   - ### 控制器创建
+      - 命名规则： *控制器名(英文首字母大写)+Controller+.class.php*
+         - 例如： 
+         ```
+         UserController.class.php
+         ```
+         
+         ```php
+          <?php
+          #声明命名控件
+          namespace Home\Controller;
+          #引入父类控制器
+          use Think\Controller;
+          #声明控制器（类）并且继承父类
+          class UserController extends Controller {
+              public function index(){    
+              }
+          } ?> 
+         ```
